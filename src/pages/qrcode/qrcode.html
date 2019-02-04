@@ -1,0 +1,21 @@
+<!--
+  Generated template for the QrcodePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>qrcode</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="scanCode()">Scan</button>
+  <ion-card *ngIf="scannedCode">
+    <ion-card-content>
+      <p>Vlaue: {{ scannedCode }}</p>
+    </ion-card-content>
+  </ion-card>
+  <h1 *ngIf="error">Wrong Code Try Again</h1>
+</ion-content>

@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Avengers: EndGame</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  padding>
+    <ion-card>
+        <img height="275px" width="100%" src="../../assets/imgs/avengers-4-lego-leak.jpg"/>
+     
+        <ion-list>
+          <button ion-item (click)="onGoToRegister()" >
+            <ion-icon name="infinite" item-start></ion-icon>
+            REGISTER
+          </button>
+      
+          <button ion-item (click)="onGoToPrizes()">
+            <ion-icon name="ribbon" item-start></ion-icon>
+            PRIZES
+          </button>
+      
+          <button ion-item (click)="onGoToRules()">
+            <ion-icon name="book" item-start></ion-icon>
+            RULES
+          </button>
+      
+          <button ion-item (click)="onGoToFaq()">
+            <ion-icon name="search" item-start></ion-icon>
+           FAQ 
+          </button>
+      
+          
+        </ion-list>
+      </ion-card>
+</ion-content>

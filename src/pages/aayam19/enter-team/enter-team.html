@@ -1,0 +1,152 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Enter-team Members</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Enter Team Member Details</h1>
+  <form #f="ngForm" (ngSubmit)="Save_the_Universe(f)">
+    <ion-list>
+      <ion-card>
+        <ion-card-header><b>Team Member 1</b></ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" ngModel required name="name1"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="Email" ngModel required name="email1"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Contact</ion-label>
+            <ion-input
+              type="number"
+              #Tc1
+              ngModel
+              required
+              name="contact1"
+            ></ion-input>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header
+          ><b><i>Team Member 2</i></b></ion-card-header
+        >
+        <ion-card-content>
+          <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input
+              type="text"
+              #Tn2
+              ngModel
+              required
+              name="name2"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input
+              type="text"
+              #Te2
+              ngModel
+              required
+              name="email2"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Contect</ion-label>
+            <ion-input
+              type="number"
+              #Tc2
+              ngModel
+              required
+              name="contact2"
+            ></ion-input>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header
+          ><b><i>Team Member 3 </i></b></ion-card-header
+        >
+        <ion-card-content>
+          <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input
+              type="text"
+              #Tn3
+              ngModel
+              required
+              name="name3"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input
+              type="text"
+              #Te3
+              ngModel
+              required
+              name="email3"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Contact</ion-label>
+            <ion-input
+              type="number"
+              #Tc3
+              ngModel
+              required
+              name="contact3"
+            ></ion-input>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header><b>Team Member 4</b></ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input
+              type="text"
+              #Tn1
+              ngModel
+              required
+              name="name4"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input
+              type="text"
+              #Te1
+              ngModel
+              required
+              name="email4"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Contact</ion-label>
+            <ion-input
+              type="number"
+              #Tc1
+              ngModel
+              required
+              name="contact4"
+            ></ion-input>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <button ion-button full type="submit" [disabled]="!f.valid">
+      Save_the_Universe
+    </button>
+  </form>
+</ion-content>

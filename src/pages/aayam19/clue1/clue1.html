@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Hail Hydra!!</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-card>
+      <img height="375px" width="100%" src="../../../assets/imgs/cmarvel.PNG" />
+      <ion-item>
+        <ion-label floating>User Name</ion-label>
+        <ion-input type="text" #uname></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>4- digit Passcode</ion-label>
+        <ion-input type="password" #4passcode></ion-input>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+  <div padding>
+    <button ion-button button color="danger" outline (click)="signIn()">
+      Enter
+    </button>
+    <button ion-button button color="danger" outline (click)="toNext()">
+      Skip
+    </button>
+  </div>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Your Team</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>About Team</h1>
+  <ion-list *ngFor="let player of team; let i = index">
+    <ion-card>
+      <ion-card-header
+        ><b
+          ><i>Member {{ i + 1 }}</i></b
+        ></ion-card-header
+      >
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="../../../assets/imgs/cap.jpg" />
+            </ion-avatar>
+            <h2>Name: {{ player.name }}</h2>
+            <h2>Contact: {{ player.contact }}</h2>
+            <h3>Email: {{ player.email }}</h3>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <button ion-button large (click)="play()" outline>Play</button>
+</ion-content>

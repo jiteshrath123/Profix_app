@@ -1,0 +1,7 @@
+{
+  "name": "profix_eduventure",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
