@@ -1,3 +1,14 @@
 page-qrcode {
-
+    ion-content{
+        background-image: url('../../assets/imgs/blue.jpg');
+        background-size: cover!important;
+        text-align: center;
+    }
+    ion-button{
+        margin-left:auto;
+        margin-right:auto;
+        display:block;
+        margin-top:auto;
+        margin-bottom:auto;
+    }
 }
