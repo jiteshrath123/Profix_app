@@ -1,10 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-import {BarcodeScanner} from "@ionic-native/barcode-scanner";
 import { Clue3Page } from '../clue3/clue3';
-import { QrcodePage } from '../../qrcode/qrcode';
 import { TabsPage } from '../../tabs/tabs';
+import {QrcodePage} from '../../qrcode/qrcode';
 
 @Component({
   selector: 'page-clue2',
@@ -13,10 +12,8 @@ import { TabsPage } from '../../tabs/tabs';
 export class Clue2Page {
 
   @ViewChild('day') day;
-  qrData=null;
-  scannedCode=null;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, private barcodeScanner: BarcodeScanner) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
   }
 
 signIn(){

@@ -1,8 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { MoviesPage } from '../movies/movies';
 import { Clue0bPage } from '../clue0b/clue0b';
 @Component({
   selector: 'page-clue0a',
@@ -23,8 +21,6 @@ export class Clue0aPage {
   @ViewChild('cc10') cc10;
   @ViewChild('cc11') cc11;
   @ViewChild('cc12') cc12;
-  qrData = null;
-  scannedCode = null;
 
   constructor(
     public navCtrl: NavController,
