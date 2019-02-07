@@ -11,6 +11,7 @@
     "lint": "ionic-app-scripts lint"
   },
   "dependencies": {
+    "@agm/core": "^1.0.0-beta.5",
     "@angular/animations": "5.2.11",
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",
@@ -32,6 +33,7 @@
     "@ionic-native/video-player": "^4.20.0",
     "@ionic-native/youtube-video-player": "^5.0.0",
     "@ionic/storage": "^2.2.0",
+    "angular2-google-maps": "^0.17.0",
     "com.moust.cordova.videoplayer": "https://github.com/moust/cordova-plugin-videoplayer.git",
     "cordova-android": "^6.4.0",
     "cordova-plugin-advanced-http": "^2.0.4",
