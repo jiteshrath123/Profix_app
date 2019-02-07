@@ -24,9 +24,6 @@ export class Clue1Page {
     if (
       (this.cname.value == 'CAPTAIN MARVEL', this.cpassword.value == '9851')
     ) {
-      this.barcodeScanner.scan().then(barcodeData => {
-        this.scannedCode = barcodeData.text;
-        if (barcodeData.text == 'Clue1') {
           const confirm = this.alertCtrl.create({
             title: ' Captain Marvel has arrived',
             message: 'Your Rank is',
@@ -40,9 +37,7 @@ export class Clue1Page {
             ]
           });
           confirm.present();
-        }
-      });
-    }
+      }
   }
   toNext() {
     this.navCtrl.push(Clue2Page);

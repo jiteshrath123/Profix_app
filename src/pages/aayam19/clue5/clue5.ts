@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the Clue5Page page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Clue6Page } from '../clue6/clue6';
 
 @Component({
   selector: 'page-clue5',
@@ -17,8 +11,8 @@ export class Clue5Page {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Clue5Page');
-  }
 
+  tonext() {
+    this.navCtrl.push(Clue6Page);
+  }
 }

@@ -1,3 +1,19 @@
 page-clue3 {
+    ion-content{
+        background-image: url('../../../assets/imgs/blue1.jpg');
+        background-size: cover!important;
+        text-align: center;
+    }
+    ion-input{
+        background-image: url('../../../assets/imgs/white.jpg');
+        font-size: 30px !important;  
+        text-align: center;
+    }
+    ion-row{
+        border: 2px solid;
+    }
 
+    ion-col{
+        border: 2px solid;
+    }
 }
