@@ -1,12 +1,16 @@
 page-register {
     ion-content{
-        background-image: url('../../../assets/imgs/blue.jpg');
+        background-color: navy ;
         background-size: cover!important;
         text-align: center;
     }
     ion-item{
-        background-image: url('../../../assets/imgs/white.jpg');
-       
+      border-width: 5 px;
+      padding: 4 px,4px;
+      border-color: black;  
     }
-    
+    .submit-button{
+        color: goldenrod;
+        background-color: darkred;
+    }
 }

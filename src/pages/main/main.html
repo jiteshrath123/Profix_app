@@ -1,9 +1,24 @@
 <ion-header>
-  <ion-navbar> <ion-title>main</ion-title> </ion-navbar>
+  <ion-navbar> <ion-title>Main</ion-title> </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="logout()">Logout</button>
-  <button ion-button (click)="toEnterTeam()">Enter Team</button>
-  <button ion-button (click)="toTeam()">Your Team</button>
+    <div >
+        <button class="logout" icon-start ion-button large  float-right (click)="logout()">
+          <ion-icon name="log-out"></ion-icon>
+          Logout
+        </button>
+      </div>
+   <div >
+    <button class="team_button" ion-button large block round icon-start (click)="toEnterTeam()">
+        <ion-icon name='people'></ion-icon>
+      Enter Team</button>
+    
+  </div>
+  <div >
+    <button class="team_button" ion-button icon-start large block round size="large" (click)="toTeam()">
+      <ion-icon name='people'></ion-icon>
+      Your Team</button>
+  </div>
+  
 </ion-content>

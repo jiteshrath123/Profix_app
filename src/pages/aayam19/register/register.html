@@ -6,7 +6,7 @@
   <ion-list>
     <img height="375px" width="100%" src="../../../assets/imgs/register.jpg" />
     <ion-item >
-      <ion-label color="primary" floating>Team Leader Email</ion-label>
+      <ion-label color="primary" floating>Email</ion-label>
       <ion-input  type="text" #crname></ion-input>
     </ion-item>
 
@@ -17,13 +17,11 @@
   </ion-list>
 
   <div padding>
-    <button ion-button button color="primary" (click)="signIn()">
-      JOIN THE AVENGERS TEAM
+    <button ion-button button float-right class="submit-button" (click)="signIn()">
+      JOIN YOUR COMRADES!
     </button>
-  </div>
-  <div>
-    <button ion-button button color="primary"  (click)="signUp()">
-      REGISTER THE TEAM
+      <button ion-button button float-left class="submit-button"  (click)="signUp()">
+      REGISTER 
     </button>
   </div>
 </ion-content>
