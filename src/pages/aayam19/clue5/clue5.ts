@@ -4,15 +4,12 @@ import { Clue6Page } from '../clue6/clue6';
 
 @Component({
   selector: 'page-clue5',
-  templateUrl: 'clue5.html',
+  templateUrl: 'clue5.html'
 })
 export class Clue5Page {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-
-  tonext() {
+  toNext() {
     this.navCtrl.push(Clue6Page);
   }
 }
