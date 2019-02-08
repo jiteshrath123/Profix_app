@@ -8,23 +8,23 @@
 </ion-header>
 
 <ion-content padding>
-  <div class="def">
+  
       <form #f="ngForm" (ngSubmit)="Save_the_Universe(f)">
           <ion-list>
             <ion-card>
-              <ion-card-header><b>Team Member 1</b></ion-card-header>
+              <ion-card-header><b> Team Member 1</b></ion-card-header>
               <hr>
               <ion-card-content>
                 <ion-item>
-                  <ion-label floating>Name</ion-label>
+                  <ion-label floating style="color:darkred">Name</ion-label>
                   <ion-input type="text" ngModel required name="name1"></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-label floating>Email</ion-label>
+                  <ion-label floating style="color:darkred">Email</ion-label>
                   <ion-input type="Email" ngModel required name="email1"></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-label floating>Contact</ion-label>
+                  <ion-label floating style="color:darkred">Contact</ion-label>
                   <ion-input
                     type="number"
                     #Tc1
@@ -42,7 +42,7 @@
                 <hr>
               <ion-card-content>
                 <ion-item>
-                  <ion-label floating>Name</ion-label>
+                  <ion-label floating style="color:darkred">Name</ion-label>
                   <ion-input
                     type="text"
                     #Tn2
@@ -52,7 +52,7 @@
                   ></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-label floating>Email</ion-label>
+                  <ion-label floating style="color:darkred">Email</ion-label>
                   <ion-input
                     type="text"
                     #Te2
@@ -62,7 +62,7 @@
                   ></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-label floating>Contect</ion-label>
+                  <ion-label floating style="color:darkred">Contact</ion-label>
                   <ion-input
                     type="number"
                     #Tc2
@@ -80,7 +80,7 @@
                 <hr>
                 <ion-card-content>
                  <ion-item>
-                  <ion-label floating>Name</ion-label>
+                  <ion-label floating style="color:darkred">Name</ion-label>
                   <ion-input
                     type="text"
                     #Tn3
@@ -90,7 +90,7 @@
                   ></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-label floating>Email</ion-label>
+                  <ion-label floating style="color:darkred">Email</ion-label>
                   <ion-input
                     type="text"
                     #Te3
@@ -100,7 +100,7 @@
                   ></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-label floating>Contact</ion-label>
+                  <ion-label floating style="color:darkred">Contact</ion-label>
                   <ion-input
                     type="number"
                     #Tc3
@@ -117,7 +117,7 @@
               <hr>
               <ion-card-content>
                 <ion-item>
-                  <ion-label floating>Name</ion-label>
+                  <ion-label floating style="color:darkred">Name</ion-label>
                   <ion-input
                     type="text"
                     #Tn1
@@ -127,7 +127,7 @@
                   ></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-label floating>Email</ion-label>
+                  <ion-label floating style="color:darkred">Email</ion-label>
                   <ion-input
                     type="text"
                     #Te1
@@ -137,7 +137,7 @@
                   ></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-label floating>Contact</ion-label>
+                  <ion-label floating style="color:darkred">Contact</ion-label>
                   <ion-input
                     type="number"
                     #Tc1
@@ -149,11 +149,9 @@
               </ion-card-content>
             </ion-card>
           </ion-list>
-      
-          
-  </div>
-  <button ion-button full type="submit" [disabled]="!f.valid">
-      Save_the_Universe
-    </button>
-  </form>
+    
+          <button ion-button full type="submit" [disabled]="!f.valid">
+            Save_the_Universe
+          </button>
+        </form>
 </ion-content>
