@@ -5,28 +5,32 @@
 </ion-header>
 
 <ion-content padding>
-  <h1>About Team</h1>
+  <h1><b><i>About Team</i></b></h1>
   <ion-list *ngFor="let player of team; let i = index">
     <ion-card>
       <ion-card-header
-        ><b
-          ><i>Member {{ i + 1 }}</i></b
-        ></ion-card-header
+        ><b>
+          <i> Hero {{ i + 1 }}</i>
+        </b>
+        </ion-card-header
       >
       <ion-card-content>
         <ion-list>
           <ion-item>
             <ion-avatar item-start>
-              <img src="../../../assets/imgs/cap.jpg" />
+                <img src="https://img.icons8.com/wired/64/000000/gender-neutral-user.png">
             </ion-avatar>
-            <h2>Name: {{ player.name }}</h2>
+            <h2><b> {{ player.name }}</b></h2>
             <h2>Contact: {{ player.contact }}</h2>
-            <h3>Email: {{ player.email }}</h3>
+            <h3><i>{{ player.email }}</i></h3>
           </ion-item>
         </ion-list>
       </ion-card-content>
     </ion-card>
   </ion-list>
 
-  <button ion-button large (click)="play()" outline>Play</button>
+  <button ion-button large float-right icon-start (click)="play()" outline>
+      <ion-icon name="play"></ion-icon>
+    <b>Play</b>
+  </button>
 </ion-content>
