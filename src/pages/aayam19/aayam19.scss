@@ -7,4 +7,28 @@ page-aayam19 {
   width: 100% !important;
   margin: 0 !important;
 }
+  .box{
+  border: 1px solid black;
+  width:50%;
+  height:75%;
+}
+ion-grid {
+  height: 100%;
+
+  ion-row {
+    height: 50%;
+  }
+}
+.icons{
+  font-size: 105px;
+  padding-left: 15px;
+  }
+ion-thumbnail{
+  border:1px dashed;
+  
+}
+
+  
+
+
 }

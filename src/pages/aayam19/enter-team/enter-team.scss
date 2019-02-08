@@ -1,20 +1,31 @@
 page-enter-team {
+    #abc{
+        
+        text-align: center;
+        color:goldenrod;
+
+    }
     ion-content{
-        background-image: url('../../../assets/imgs/b12.jpg');
+        
         background-size: cover!important;
         text-align: center;
     }
     ion-item{
-        background-image: url('../../../assets/imgs/grad.png');
-       
+        
     }
     ion-card{
-        background-image: url('../../../assets/imgs/b12.jpeg');
+        border: 1px dotted darkred;
    }
    ion-card-content{
-    background-image: url('../../../assets/imgs/89.jpg');
+       background-color: darkred;
+    
 }
 ion-card-header{
-    background-image: url('../../../assets/imgs/89.jpg');
+   
 }
+.def{
+    background-color: darkgoldenrod
+}
+
+
 }
