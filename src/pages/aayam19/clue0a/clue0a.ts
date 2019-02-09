@@ -21,11 +21,27 @@ export class Clue0aPage {
   @ViewChild('cc10') cc10;
   @ViewChild('cc11') cc11;
   @ViewChild('cc12') cc12;
-
+  visible = true;
   constructor(
     public navCtrl: NavController,
     public alertCtrl: AlertController,
     ) {}
+
+  Clues= [ 'ccT', 'cc1', 'cc2', 'cc3', 'cc4', 'cc5', 'cc6', 
+           'ccB', 'cc7', 'cc8', 'cc9', 'cc10', 'cc11', 'cc12'
+  ];
+  checkIn()
+{
+  if(this.ccT.value == 'TERRITORY')
+  {
+    this.visible=!this.visible;
+  }
+  if(this.cc1.value =='THE DEADLANDS')
+  {
+    this.visible=!this.visible;
+  }
+
+}
 
   signIn() {
     if (
@@ -45,8 +61,10 @@ export class Clue0aPage {
           });
           confirm.present();
         }
+        
   }
   tonext() {
     this.navCtrl.push(Clue0bPage);
   }
+
 }
