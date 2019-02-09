@@ -8,23 +8,29 @@
   <ion-list>
     <ion-card>
       <img height="375px" width="100%" src="../../../assets/imgs/cmarvel.PNG" />
-      <ion-item>
-        <ion-label floating>User Name</ion-label>
-        <ion-input type="text" #uname></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label floating>4- digit Passcode</ion-label>
-        <ion-input type="password" #4passcode></ion-input>
-      </ion-item>
     </ion-card>
+      <br>
+      <hr>
+      <br>
+      <ion-thumbnail style="border-radius: 15px;">
+          <ion-item>
+              <ion-label floating style="color:darkblue">User Name</ion-label>
+              <ion-input type="text" #uname style="color:darkblue"></ion-input>
+            </ion-item>
+      
+            <ion-item>
+              <ion-label floating style="color:darkblue">4- digit Passcode</ion-label>
+              <ion-input type="password" #4passcode style="color:darkblue"></ion-input>
+            </ion-item>
+      </ion-thumbnail>
   </ion-list>
-
+  <br>
+  <hr>
   <div padding>
-    <button ion-button button color="danger" outline (click)="signIn()">
+    <button ion-button button color="danger" outline (click)="signIn()" float="left"> 
       Enter
     </button>
-    <button ion-button button color="danger" outline (click)="toNext()">
+    <button ion-button button color="danger" outline (click)="toNext()" float="left">
       Skip
     </button>
   </div>
