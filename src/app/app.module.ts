@@ -36,14 +36,12 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { AteaminfoPage } from '../pages/ateaminfo/ateaminfo';
 import { QrcodePage } from '../pages/qrcode/qrcode';
 import { GenerateObservable } from 'rxjs/observable/GenerateObservable';
-<<<<<<< HEAD
 import { SetLocationPage } from '../pages/set-location/set-location';
 import { PlacePage } from '../pages/place/place';
 import { GeolocatePage } from '../pages/geolocate/geolocate';
 import { AddPlacePage } from '../pages/add-place/add-place';
-=======
+
 import { VerificationPage } from '../pages/aayam19/verification/verification';
->>>>>>> 283d60d6be76b96c7408c2cd5df7f5722aba6777
 
 @NgModule({
   declarations: [
@@ -72,14 +70,11 @@ import { VerificationPage } from '../pages/aayam19/verification/verification';
     MoviesPage,
     AteaminfoPage,
     QrcodePage,
-<<<<<<< HEAD
     AddPlacePage,
     SetLocationPage,
     PlacePage,
-    GeolocatePage
-=======
+    GeolocatePage,
     VerificationPage
->>>>>>> 283d60d6be76b96c7408c2cd5df7f5722aba6777
   ],
   imports: [
     BrowserModule,
@@ -117,14 +112,11 @@ import { VerificationPage } from '../pages/aayam19/verification/verification';
     MainPage,
     AteaminfoPage,
     QrcodePage,
-<<<<<<< HEAD
     AddPlacePage,
     SetLocationPage,
     PlacePage,
-    GeolocatePage
-=======
+    GeolocatePage,
     VerificationPage
->>>>>>> 283d60d6be76b96c7408c2cd5df7f5722aba6777
   ],
   providers: [
     StatusBar,
