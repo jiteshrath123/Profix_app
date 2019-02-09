@@ -1,5 +1,5 @@
 page-enter-team {
-    #abc{
+    #container{
         
         text-align: center;
         color:goldenrod;
@@ -22,10 +22,11 @@ page-enter-team {
    ion-card-content{
        background-color: darkred;
     
-}
-ion-card-header{
+   }
+   .header{
+       font-style: Georgia;
    
-}
+    }
 
 
 
