@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>verification</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <button ion-button (click)="scanCode()">Scan the QR CODE</button>
+    <ion-card *ngIf="scannedCode">
+      <ion-card-content>
+        <p>Vlaue: {{ scannedCode }}</p>
+      </ion-card-content>
+    </ion-card>
+    <h1 *ngIf="error">Wrong Code Try Again</h1>
+  
+</ion-content>

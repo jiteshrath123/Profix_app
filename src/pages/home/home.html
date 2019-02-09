@@ -9,7 +9,7 @@
    <img src="../../assets/imgs/profix.png">
   
    <ion-card id="slide"><ion-slides autoplay="5000" loop="true" speed="3000">
-        <ion-slide> <img src="../../assets/imgs/slide1.jpg"> </ion-slide>
+        <ion-slide> <img src="../../assets/imgs/books.jpg"> </ion-slide>
         <ion-slide><h1>EDUVENTURES &</h1><img src="../../assets/imgs/slide2.jpg"> <h1>EVENTS</h1></ion-slide>
         <ion-slide><h1>GS PRODUCTION HOUSE</h1><img src="../../assets/imgs/GSPH.jpg">  </ion-slide>
       </ion-slides>
@@ -34,4 +34,14 @@
       <li>GS Production House</li>
     </ul>  
 
-  
+    <ion-fab right bottom>
+        <button ion-fab color="energy"><ion-icon name="contacts"></ion-icon></button>
+        <ion-fab-list side="left">
+          <button ion-fab color="light" (click)="openhome()"><ion-icon name="home"></ion-icon></button>
+          <button ion-fab color="peace" (click)="openfb()"><ion-icon name="logo-facebook"></ion-icon></button>
+          <button ion-fab color="insta" (click)="openinsta()"><ion-icon name="logo-instagram"></ion-icon></button>
+          <button ion-fab color="danger" (click)="openmail()"><ion-icon name="mail"></ion-icon></button>
+          <button ion-fab color="lightpeace" (click)="openlin()"><ion-icon name="logo-linkedin"></ion-icon></button>
+        </ion-fab-list>
+      </ion-fab>
+  </ion-content>

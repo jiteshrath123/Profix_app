@@ -5,15 +5,24 @@ page-clue3 {
         text-align: center;
     }
     ion-input{
-        background-image: url('../../../assets/imgs/white.jpg');
         font-size: 30px !important;  
         text-align: center;
     }
     ion-row{
+        background-image: url('../../../assets/imgs/white.jpg');
         border: 2px solid;
     }
 
     ion-col{
+        background-image: url('../../../assets/imgs/white.jpg');
         border: 2px solid;
     }
+    ion-item {
+        color: lightgray;
+         box-shadow: none;
+         border: 4px;
+         border-radius : 17px;
+       }
+    
+    
 }

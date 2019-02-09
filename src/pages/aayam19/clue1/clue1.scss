@@ -1,11 +1,21 @@
 page-clue1{
   ion-content{
-  background-image: url('../../../assets/imgs/hydra.jpg');
   background-size: cover!important;
   text-align: center;
   }
-  ion-item{
-  background-image: url('../../../assets/imgs/white.jpg');
- 
+  .content{
+    background-color: lightgoldenrodyellow;
   }
+  ion-thumbnail{
+    border: 3px dotted darkred;
+    background-color: rgb(231, 194, 99);
+  }
+  ion-card{
+    background-image: url('../../../assets/imgs/hydra.jpg');
+  }
+  
+  .button{
+    background-color: darkred;
+    color: aliceblue;
+  } 
 }
