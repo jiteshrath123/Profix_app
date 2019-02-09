@@ -8,18 +8,44 @@ page-home {
       }
 
       .measurements {
-        color: white;
-        margin-right: 5px;
-        padding: 10px;
+        background-color: lightcyan;
+        color: midnightblue;
+        margin-right: 0px;
+        padding: 25px;
      }
-
-     .divider {
+          .divider {
       font-size: 30px;
      }
     }
+    h1{
+      padding: 10px;
+      color: lightcyan;
+      font-family: cursive;
+      height: 10%;
+    }
+    
+    #slide{
+      height: 50%;
+    }
     ion-content{
-        background-image: url('../../assets/imgs/space.jpg');
+        background-image: url('../../assets/imgs/home_bg.jpg');
         background-size: cover!important;
         text-align: center;
+        #about{
+          text-align: left;
+          color: burlywood;
+        }
+        #ventures{
+          text-align: right;
+          color: burlywood;
+        }
+        p{
+          text-align:right;
+          color: azure;
+        }
+        ul{
+          text-align: left;
+          color:azure;
+        }
     }
 }
