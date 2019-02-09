@@ -3,26 +3,19 @@ page-clue1{
   background-size: cover!important;
   text-align: center;
   }
-  .thumbnail{
-    border: 3px dotted darkcyan;
-    padding-bottom: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
+  .content{
+    background-color: lightgoldenrodyellow;
+  }
+  ion-thumbnail{
+    border: 3px dotted darkred;
+    background-color: rgb(231, 194, 99);
   }
   ion-card{
     background-image: url('../../../assets/imgs/hydra.jpg');
   }
-  .content{
-    background-color: lightsteelblue;
-  }
+  
   .button{
-    background-color: darkslateblue;
+    background-color: darkred;
     color: aliceblue;
-  }
-  hr{
-    border: 0;
-    height: 2px;
-    background-image: linear-gradient(to right, rgba(51, 80, 160, 0.75), rgba(51, 80, 160, 0.75), rgba(51, 80, 160, 0.75));
-  }
- 
+  } 
 }
