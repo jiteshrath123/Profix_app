@@ -46,7 +46,7 @@ export class Clue4Page {
           confirm.present();
         }
   }
-  tonext() {
+  toNext() {
     this.navCtrl.push(Clue5Page);
   }
 

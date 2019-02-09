@@ -21,7 +21,7 @@ export class Clue0aPage {
   @ViewChild('cc10') cc10;
   @ViewChild('cc11') cc11;
   @ViewChild('cc12') cc12;
-  visible = true;
+  visible = false;
   constructor(
     public navCtrl: NavController,
     public alertCtrl: AlertController,
@@ -37,8 +37,10 @@ export class Clue0aPage {
     this.visible=!this.visible;
   }
   if(this.cc1.value =='THE DEADLANDS')
+  {  if(this.ccT.value == 'TERRITORY')
   {
     this.visible=!this.visible;
+  }
   }
 
 }

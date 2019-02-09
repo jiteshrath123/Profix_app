@@ -10,16 +10,15 @@ import {QrcodePage} from '../../qrcode/qrcode';
   templateUrl: 'clue2.html',
 })
 export class Clue2Page {
-
+  attempt: number;
   @ViewChild('day') day;
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+    this.attempt=0
   }
 
 signIn(){
-  for(let i=0; i<3; i++)
-  {
-  if(this.day.value=="WEDNESDAY")
+    if(this.day.value=="WEDNESDAY")
   {   const confirm = this.alertCtrl.create({
         title: ' Captain Marvel has arrived',
         message: 'Your Rank is',
@@ -33,7 +32,7 @@ signIn(){
         ]
       });
       confirm.present();
-   
+   this.attempt++;
 
     }
     else{
@@ -48,23 +47,24 @@ signIn(){
         ]
       });
       confirm.present();
-   
-    }
-    i++;
-  }
-  const confirm = this.alertCtrl.create({
-    title: ' Thanos wins. Thank you for playing...',
-    buttons: [
+      this.attempt++;
+      if(this.attempt>2)
       {
-        text: 'OK!',
-        handler: () => {
-          this.navCtrl.setRoot(TabsPage);
+    const confirm = this.alertCtrl.create({
+      title: ' Thanos wins. Thank you for playing...',
+      buttons: [
+        {
+          text: 'OK!',
+          handler: () => {
+            this.navCtrl.setRoot(TabsPage);
+          }
         }
-      }
-    ]
-  });
-  confirm.present();
-
+      ]
+    });
+    confirm.present();
+  }
+}
+    
 }
 
 toNext() {

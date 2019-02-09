@@ -1,10 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Clue1Page } from '../clue1/clue1';
-import { QrcodePage } from '../../qrcode/qrcode';
+import { VerificationPage } from '../verification/verification';
 
 @Component({
   selector: 'page-clue0b',
@@ -28,7 +26,7 @@ export class Clue0bPage {
 
   signIn() {
     if (
-      this.cob1.value =='RED SKULL' , this.cob2.value=="HELA", this.cob3.value=="PEFECTION AND YELLOW",this.cob4.value=="GAMORA AND RONAN", this.cob5.value=="WONG AND DORMAMMU",this.cob6.value=="THE DEADLANDS"
+      this.cob1.value =='RED SKULL' , this.cob2.value=="HELA", this.cob3.value=="PERFECTION AND YELLOW",this.cob4.value=="GAMORA AND RONAN", this.cob5.value=="WONG AND DORMAMMU",this.cob6.value=="THE DEADLANDS"
     ) {
           const confirm = this.alertCtrl.create({
             title: ' Congratulation The Battle World Clue is Solved ',
@@ -37,7 +35,7 @@ export class Clue0bPage {
               {
                 text: 'OK!',
                 handler: () => {
-                  this.navCtrl.push(QrcodePage);
+                  this.navCtrl.push(VerificationPage);
                 }
               }
             ]

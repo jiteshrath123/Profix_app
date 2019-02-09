@@ -36,6 +36,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { AteaminfoPage } from '../pages/ateaminfo/ateaminfo';
 import { QrcodePage } from '../pages/qrcode/qrcode';
 import { GenerateObservable } from 'rxjs/observable/GenerateObservable';
+import { VerificationPage } from '../pages/aayam19/verification/verification';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { GenerateObservable } from 'rxjs/observable/GenerateObservable';
     MainPage,
     MoviesPage,
     AteaminfoPage,
-    QrcodePage
+    QrcodePage,
+    VerificationPage
   ],
   imports: [
     BrowserModule,
@@ -97,7 +99,8 @@ import { GenerateObservable } from 'rxjs/observable/GenerateObservable';
     EnterTeamPage,
     MainPage,
     AteaminfoPage,
-    QrcodePage
+    QrcodePage,
+    VerificationPage
   ],
   providers: [
     StatusBar,

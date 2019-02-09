@@ -12,7 +12,7 @@ export class Clue5Page {
   }
 
 
-  tonext() {
+  toNext() {
     this.navCtrl.push(Clue6Page);
   }
 }
