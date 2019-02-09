@@ -9,31 +9,61 @@
 
 
 <ion-content  padding>
+  
     <ion-card>
-        <img height="275px" width="100%" src="../../assets/imgs/avengers-4-lego-leak.jpg"/>
-     
-        <ion-list>
-          <button ion-item (click)="onGoToRegister()" >
-            <ion-icon name="infinite" item-start></ion-icon>
-            REGISTER
-          </button>
-      
-          <button ion-item (click)="onGoToPrizes()">
-            <ion-icon name="ribbon" item-start></ion-icon>
-            PRIZES
-          </button>
-      
-          <button ion-item (click)="onGoToRules()">
-            <ion-icon name="book" item-start></ion-icon>
-            RULES
-          </button>
-      
-          <button ion-item (click)="onGoToFaq()">
-            <ion-icon name="search" item-start></ion-icon>
-           FAQ 
-          </button>
-      
-          
-        </ion-list>
-      </ion-card>
+        <ion-grid>
+            <ion-row>
+                <ion-col width-50 class="box">
+                    <ion-card >
+                        <button ion-item (click)="onGoToRegister()" >
+                            <ion-card-content>
+                                <ion-icon class="icons" name="infinite" item-start></ion-icon>        
+                                <ion-card-title>
+                                    <div class="card-title">REGISTER</div>  
+                                </ion-card-title>
+                            </ion-card-content> 
+                        </button>
+                    </ion-card>
+                </ion-col>
+                <ion-col width-50 class="box">
+                  <ion-card>
+                      <button ion-item (click)="onGoToPrizes()">
+                            <ion-card-content>
+                                    <ion-icon class="icons" name="ribbon" item-start></ion-icon>    
+                                    <ion-card-title>
+                                        <div class="card-title">PRIZES</div>  
+                                    </ion-card-title>
+                            </ion-card-content>
+                      </button>
+                  </ion-card>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col width-50 class="box">
+                  <ion-card>
+                      <button ion-item (click)="onGoToRules()">
+                            <ion-card-content>
+                                <ion-icon class="icons" name="book" item-start></ion-icon>
+                                <ion-card-title>
+                                    <div class="card-title">RULES</div>
+                                </ion-card-title>
+                            </ion-card-content>
+                      </button>
+                  </ion-card>
+              </ion-col>
+              <ion-col width-50 class="box">
+                  <ion-card>
+                      <button ion-item (click)="onGoToFaq()">
+                          <ion-card-content>
+                            <ion-icon class="icons" name="search" item-start></ion-icon>
+                            <ion-card-title>
+                              <div class="card-title">FAQ</div>
+                            </ion-card-title>
+                        </ion-card-content>
+                      </button>
+                  </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    </ion-card>
 </ion-content>
