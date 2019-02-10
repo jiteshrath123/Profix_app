@@ -48,6 +48,7 @@ import { FourthqrPage } from '../pages/fourthqr/fourthqr';
 import { FifthqrPage } from '../pages/fifthqr/fifthqr';
 import { SixthqrPage } from '../pages/sixthqr/sixthqr';
 
+
 @NgModule({
   declarations: [
     MyApp,

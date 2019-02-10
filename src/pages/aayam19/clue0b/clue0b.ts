@@ -1,9 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-import { Clue1Page } from '../clue1/clue1';
-import { VerificationPage } from '../verification/verification';
+
 import { QrcodePage } from '../../qrcode/qrcode';
+import { VerificationPage } from '../verification/verification';
+
 
 @Component({
   selector: 'page-clue0b',
@@ -83,7 +84,7 @@ export class Clue0bPage {
           {
             text: 'OK!',
             handler: () => {
-              this.navCtrl.push(QrcodePage);
+              this.navCtrl.push(VerificationPage);
             }
           }
         ]
@@ -92,6 +93,7 @@ export class Clue0bPage {
     }
   }
   toNext() {
-    this.navCtrl.push(QrcodePage);
+    this.navCtrl.push(VerificationPage);
   }
+  
 }

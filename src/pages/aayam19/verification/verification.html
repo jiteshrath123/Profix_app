@@ -1,13 +1,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>verification</ion-title>
+    <ion-title>Verify The Territories</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  
+        <ion-content overflow-scroll="true">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1lQFQHvht-XbFVVMB_T9TO_QHvhxaEgxS" width="100%" height="90%"></iframe>
+          </ion-content>
+  
     <button ion-button (click)="scanCode()">Scan the QR CODE</button>
     <ion-card *ngIf="scannedCode">
       <ion-card-content>
@@ -16,4 +21,9 @@
     </ion-card>
     <h1 *ngIf="error">Wrong Code Try Again</h1>
   
+    <div>
+    <button ion-button button color="secondary" outline (click)="toNext()">
+        Skip
+      </button>
+    </div>
 </ion-content>
