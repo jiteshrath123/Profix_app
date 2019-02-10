@@ -1,11 +1,18 @@
 page-clue0a {
     ion-content{
-        background-image: url('../../../assets/imgs/blue1.jpg');
+        background-color: goldenrod;
         background-size: cover!important;
         text-align: center;
     }
-    ion-item{
-        background-image: url('../../../assets/imgs/white.jpg');
+    .card{
+        border: thick double darkred;
+    }
+    h3{
        
+        color:darkred;
+    }
+    .button{
+        color: darkred;
+        border: thick double darkred;
     }
 }
