@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
-import { Geolocation } from '@ionic-native/geolocation';
+
 import { IonicStorageModule } from '@ionic/storage';
 import { AgmCoreModule } from '@agm/core';
 import { MyApp } from './app.component';
@@ -35,7 +35,7 @@ import { MoviesPage } from '../pages/aayam19/movies/movies';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { AteaminfoPage } from '../pages/ateaminfo/ateaminfo';
 import { QrcodePage } from '../pages/qrcode/qrcode';
-import { GenerateObservable } from 'rxjs/observable/GenerateObservable';
+
 import { SetLocationPage } from '../pages/set-location/set-location';
 import { PlacePage } from '../pages/place/place';
 import { GeolocatePage } from '../pages/geolocate/geolocate';
