@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { Clue1Page } from '../aayam19/clue1/clue1';
+import { Clue4Page } from '../aayam19/clue4/clue4';
 
 @Component({
-  selector: 'page-qrcode',
-  templateUrl: 'qrcode.html'
+  selector: 'page-fourthqr',
+  templateUrl: 'fourthqr.html'
 })
-export class QrcodePage {
+export class FourthqrPage {
   scannedCode = null;
   error: any = false;
 
@@ -23,14 +23,14 @@ export class QrcodePage {
   scanCode() {
     this.barcode.scan().then(barcodeData => {
       this.scannedCode = barcodeData.text;
-      if (this.scannedCode == 'firstQRCode') {
-        this.navCtrl.setRoot(Clue1Page);
+      if (this.scannedCode == 'fourthQRCode') {
+        this.navCtrl.setRoot(Clue4Page);
       } else {
         this.error = true;
       }
     });
   }
   skip() {
-    this.navCtrl.setRoot(Clue1Page);
+    this.navCtrl.setRoot(Clue4Page);
   }
 }

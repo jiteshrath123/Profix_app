@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Clue2Page } from '../clue2/clue2';
+import { SecondqrPage } from '../../secondqr/secondqr';
 
 @Component({
   selector: 'page-clue1',
@@ -24,22 +25,22 @@ export class Clue1Page {
     if (
       (this.cname.value == 'CAPTAIN MARVEL', this.cpassword.value == '9851')
     ) {
-          const confirm = this.alertCtrl.create({
-            title: ' Captain Marvel has arrived',
-            message: 'Your Rank is',
-            buttons: [
-              {
-                text: 'OK!',
-                handler: () => {
-                  this.navCtrl.push(Clue2Page);
-                }
-              }
-            ]
-          });
-          confirm.present();
-      }
+      const confirm = this.alertCtrl.create({
+        title: ' Captain Marvel has arrived',
+        message: 'Your Rank is',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {
+              this.navCtrl.push(SecondqrPage);
+            }
+          }
+        ]
+      });
+      confirm.present();
+    }
   }
   toNext() {
-    this.navCtrl.push(Clue2Page);
+    this.navCtrl.push(SecondqrPage);
   }
 }
