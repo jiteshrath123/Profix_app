@@ -5,6 +5,8 @@ import { Clue3Page } from '../clue3/clue3';
 import { TabsPage } from '../../tabs/tabs';
 import {QrcodePage} from '../../qrcode/qrcode';
 
+
+
 @Component({
   selector: 'page-clue2',
   templateUrl: 'clue2.html',
@@ -14,7 +16,10 @@ export class Clue2Page {
   @ViewChild('day') day;
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-    this.attempt=0
+    this.attempt=0;
+  }
+  help(){
+    window.open('https://www.instagram.com/profix.in/', '_system');
   }
 
 signIn(){

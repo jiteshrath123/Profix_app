@@ -43,6 +43,7 @@ import { AddPlacePage } from '../pages/add-place/add-place';
 
 import { VerificationPage } from '../pages/aayam19/verification/verification';
 
+
 @NgModule({
   declarations: [
     MyApp,

@@ -4,6 +4,7 @@ import { AlertController } from 'ionic-angular';
 import { Clue1Page } from '../clue1/clue1';
 import { VerificationPage } from '../verification/verification';
 
+
 @Component({
   selector: 'page-clue0b',
   templateUrl: 'clue0b.html'
@@ -90,6 +91,7 @@ export class Clue0bPage {
     }
   }
   toNext() {
-    this.navCtrl.push(Clue1Page);
+    this.navCtrl.push(VerificationPage);
   }
+  
 }
