@@ -42,6 +42,11 @@ import { GeolocatePage } from '../pages/geolocate/geolocate';
 import { AddPlacePage } from '../pages/add-place/add-place';
 
 import { VerificationPage } from '../pages/aayam19/verification/verification';
+import { SecondqrPage } from '../pages/secondqr/secondqr';
+import { ThirdqrPage } from '../pages/thirdqr/thirdqr';
+import { FourthqrPage } from '../pages/fourthqr/fourthqr';
+import { FifthqrPage } from '../pages/fifthqr/fifthqr';
+import { SixthqrPage } from '../pages/sixthqr/sixthqr';
 
 @NgModule({
   declarations: [
@@ -74,7 +79,12 @@ import { VerificationPage } from '../pages/aayam19/verification/verification';
     SetLocationPage,
     PlacePage,
     GeolocatePage,
-    VerificationPage
+    VerificationPage,
+    SecondqrPage,
+    ThirdqrPage,
+    FourthqrPage,
+    FifthqrPage,
+    SixthqrPage
   ],
   imports: [
     BrowserModule,
@@ -116,7 +126,12 @@ import { VerificationPage } from '../pages/aayam19/verification/verification';
     SetLocationPage,
     PlacePage,
     GeolocatePage,
-    VerificationPage
+    VerificationPage,
+    SecondqrPage,
+    ThirdqrPage,
+    FourthqrPage,
+    FifthqrPage,
+    SixthqrPage
   ],
   providers: [
     StatusBar,

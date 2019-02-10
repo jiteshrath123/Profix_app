@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { Clue1Page } from '../clue1/clue1';
 import { VerificationPage } from '../verification/verification';
+import { QrcodePage } from '../../qrcode/qrcode';
 
 @Component({
   selector: 'page-clue0b',
@@ -20,31 +21,34 @@ export class Clue0bPage {
 
   constructor(
     public navCtrl: NavController,
-    public alertCtrl: AlertController,
-
+    public alertCtrl: AlertController
   ) {}
 
   signIn() {
     if (
-      this.cob1.value =='RED SKULL' , this.cob2.value=="HELA", this.cob3.value=="PERFECTION AND YELLOW",this.cob4.value=="GAMORA AND RONAN", this.cob5.value=="WONG AND DORMAMMU",this.cob6.value=="THE DEADLANDS"
+      (this.cob1.value == 'RED SKULL',
+      this.cob2.value == 'HELA',
+      this.cob3.value == 'PERFECTION AND YELLOW',
+      this.cob4.value == 'GAMORA AND RONAN',
+      this.cob5.value == 'WONG AND DORMAMMU',
+      this.cob6.value == 'THE DEADLANDS')
     ) {
-          const confirm = this.alertCtrl.create({
-            title: ' Congratulation The Battle World Clue is Solved ',
-            message: 'Your Rank is',
-            buttons: [
-              {
-                text: 'OK!',
-                handler: () => {
-                  this.navCtrl.push(VerificationPage);
-                }
-              }
-            ]
-          });
-          confirm.present();
-      
+      const confirm = this.alertCtrl.create({
+        title: ' Congratulation The Battle World Clue is Solved ',
+        message: 'Your Rank is',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {
+              this.navCtrl.push(QrcodePage);
+            }
+          }
+        ]
+      });
+      confirm.present();
     }
   }
   toNext() {
-    this.navCtrl.push(Clue1Page);
+    this.navCtrl.push(QrcodePage);
   }
 }

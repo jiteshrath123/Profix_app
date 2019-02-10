@@ -36,7 +36,7 @@
     "@ionic/storage": "^2.2.0",
     "angular2-google-maps": "^0.17.0",
     "com.moust.cordova.videoplayer": "https://github.com/moust/cordova-plugin-videoplayer.git",
-    "cordova-android": "^6.4.0",
+    "cordova-android": "^7.1.1",
     "cordova-plugin-add-swift-support": "1.6.0",
     "cordova-plugin-advanced-http": "^2.0.4",
     "cordova-plugin-compat": "1.2.0",
@@ -93,8 +93,6 @@
       "cordova-plugin-geolocation": {},
       "cordova-plugin-geofence": {}
     },
-    "platforms": [
-      "android"
-    ]
+    "platforms": []
   }
 }

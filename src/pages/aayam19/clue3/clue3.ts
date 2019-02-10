@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { Clue4Page } from '../clue4/clue4';
 import { AlertController } from 'ionic-angular';
 import { QrcodePage } from '../../qrcode/qrcode';
+import { FourthqrPage } from '../../fourthqr/fourthqr';
+import { FifthqrPage } from '../../fifthqr/fifthqr';
 
 @Component({
   selector: 'page-clue3',
@@ -56,7 +58,7 @@ export class Clue3Page {
           {
             text: 'OK!',
             handler: () => {
-              this.navCtrl.push(QrcodePage);
+              this.navCtrl.push(FourthqrPage);
             }
           }
         ]
@@ -65,6 +67,6 @@ export class Clue3Page {
     }
   }
   toNext() {
-    this.navCtrl.push(Clue4Page);
+    this.navCtrl.push(FifthqrPage);
   }
 }
