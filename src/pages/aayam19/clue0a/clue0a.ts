@@ -41,22 +41,6 @@ export class Clue0aPage {
     public alertCtrl: AlertController
   ) {}
 
-  Clues = [
-    'ccT',
-    'cc1',
-    'cc2',
-    'cc3',
-    'cc4',
-    'cc5',
-    'cc6',
-    'ccB',
-    'cc7',
-    'cc8',
-    'cc9',
-    'cc10',
-    'cc11',
-    'cc12'
-  ];
   checkIn0() {
     if (this.ccT.value.toUpperCase() == 'TERRITORY') {
       this.visible0 = false;

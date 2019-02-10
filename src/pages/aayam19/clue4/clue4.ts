@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { Clue5Page } from '../clue5/clue5';
 import { QrcodePage } from '../../qrcode/qrcode';
+import { FifthqrPage } from '../../fifthqr/fifthqr';
 
 @Component({
   selector: 'page-clue4',
@@ -55,7 +56,7 @@ export class Clue4Page {
           {
             text: 'OK!',
             handler: () => {
-              this.navCtrl.push(QrcodePage);
+              this.navCtrl.push(FifthqrPage);
             }
           }
         ]
@@ -64,6 +65,6 @@ export class Clue4Page {
     }
   }
   toNext() {
-    this.navCtrl.push(Clue5Page);
+    this.navCtrl.push(FifthqrPage);
   }
 }
