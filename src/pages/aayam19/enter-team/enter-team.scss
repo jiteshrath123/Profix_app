@@ -2,7 +2,7 @@ page-enter-team {
     #container{
         
         text-align: center;
-        color:goldenrod;
+        color: darkred;
 
     }
     ion-content{
@@ -10,17 +10,23 @@ page-enter-team {
         background-size: cover!important;
         text-align: center;
     }
+    .card-header{
+        background-color: darkred;
+        color:darkgoldenrod;
+        border: 4mm ridge darkgoldenrod;
+
+    }
     ion-item{
         
     }
     ion-thumbnail{
-        background-color: darkgoldenrod;
+      
     }
     ion-card{
-        border: 1px dotted darkred;
+        border: 4mm ridge darkred;
    }
    ion-card-content{
-       background-color: darkred;
+      
     
    }
    .header{

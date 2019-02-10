@@ -10,7 +10,7 @@
       <img height="375px" width="100%" src="../../../assets/imgs/cmarvel.PNG" />
     </ion-card>
       <br>
-      <ion-thumbnail style="border-radius: 15px;">
+      <ion-thumbnail >
           <ion-item>
               <ion-label floating style="color:darkred">User Name</ion-label>
               <ion-input type="text" #uname style="color:darkred"></ion-input>
@@ -24,10 +24,10 @@
   </ion-list>
   <br>
   <div padding>
-    <button ion-button button color="danger" outline (click)="signIn()" float="left"> 
+    <button ion-button button style="background-color: darkred" fill (click)="signIn()" float="left"> 
       Enter
     </button>
-    <button ion-button button color="danger" outline (click)="toNext()" float="left">
+    <button ion-button button color="medium" fill (click)="toNext()" float="left">
       Skip
     </button>
   </div>
