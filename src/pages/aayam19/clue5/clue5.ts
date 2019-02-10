@@ -9,7 +9,6 @@ import { SixthqrPage } from '../../sixthqr/sixthqr';
 })
 export class Clue5Page {
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
   toNext() {
     this.navCtrl.push(SixthqrPage);
   }

@@ -114,12 +114,22 @@
           </ion-item>
           <button ion-button button color="energy" (click)="checkIn11()">Check</button>
         </ion-card>
-        
+        <ion-card *ngIf="visible12">
+            <img width="100%" src="../../../assets/imgs/cc12.PNG" />
+            <ion-item>
+              <ion-label floating>De-coded Answer</ion-label>
+              <ion-input type="text" #cc12></ion-input>
+            </ion-item>
+            <button ion-button button color="energy" (click)="checkIn12()">Check</button>
+          </ion-card>
+          
       </div>
-      <div padding *ngIf="visible12">
+      <div padding *ngIf="visible13">
           <button ion-button button color="energy" (click)="signIn()">SUBMIT</button>
+        </div>
+        <div>
         <button ion-button button color="energy" (click)="tonext()">Skip</button>
+
       </div>
       <button ion-button button color="energy" (click)="tonext()">Skip</button>
-
 </ion-content>

@@ -5,11 +5,10 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>
+ <ion-card> <h1>
     Avengers see their is one more page and decipher using the Quantum Realm
     language. But they found a new mysterious clue and questions.
-  </h3>
-  
+  </h1></ion-card>
     <ion-list>
         <ion-list-header>
            <h2><strong> Clues</strong></h2>
@@ -32,59 +31,66 @@
   
   <h3>Solve it.</h3>
   <ion-list>
-    <ion-card>
+    <ion-card *ngIf="visible0">
       <h3>The Man Out of time is approaching which villain?</h3>
       <ion-item>
         <ion-label floating>De-coded Answer</ion-label>
         <ion-input type="text" #cob1></ion-input>
-      </ion-item>
-    </ion-card>
-    <ion-card>
+       </ion-item>
+       <button ion-button button color="energy" (click)="checkIn1()">Check</button>
+      </ion-card>
+    <ion-card *ngIf="visible1">
       <h3>Which villain rules the Deadland?</h3>
       <ion-item>
         <ion-label floating>De-coded Answer</ion-label>
         <ion-input type="text" #cob2></ion-input>
       </ion-item>
-    </ion-card>
-    <ion-card>
+      <button ion-button button color="energy" (click)="checkIn2()">Check</button>
+      </ion-card>
+    <ion-card *ngIf="visible2">
       <h3>
         Iron-Man’s and Hulks creation rule which territory and guards which
         colour stone?
       </h3>
-      <ion-item>
+      <ion-item >
         <ion-label floating>De-coded Answer</ion-label>
         <ion-input type="text" #cob3></ion-input>
       </ion-item>
-    </ion-card>
-    <ion-card>
+      <button ion-button button color="energy" (click)="checkIn3()">Check</button>
+      </ion-card>
+    <ion-card *ngIf="visible3">
       <h3>Who are the siblings of Nebula?</h3>
-      <ion-item>
+      <ion-item >
         <ion-label floating>De-coded Answer</ion-label>
         <ion-input type="text" #cob4></ion-input>
-      </ion-item>
-    </ion-card>
-    <ion-card>
+        </ion-item>
+        <button ion-button button color="energy" (click)="checkIn4()">Check</button>
+      </ion-card>
+    <ion-card *ngIf="visible4">
       <h3>Which remaining hero and villain has power to control reality?</h3>
       <ion-item>
         <ion-label floating>De-coded Answer</ion-label>
         <ion-input type="text" #cob5></ion-input>
       </ion-item>
+      <button ion-button button color="energy" (click)="checkIn5()">Check</button>
     </ion-card>
-    <ion-card>
+    <ion-card *ngIf="visible5">
       <h3>Where you can find zombies?</h3>
       <ion-item>
         <ion-label floating>De-coded Answer</ion-label>
         <ion-input type="text" #cob6></ion-input>
       </ion-item>
+      <button ion-button button color="energy" (click)="checkIn6()">Check</button>
     </ion-card>
   </ion-list>
 
-  <div padding>
+  <div padding *ngIf="visible6">
     <button ion-button button color="secondary" outline (click)="signIn()">
-      JOIN THE AVENGERS
-    </button>
-    <button ion-button button color="secondary" outline (click)="toNext()">
-      Skip
+      SUBMIT
     </button>
   </div>
+  
+  <button ion-button button color="secondary" outline (click)="toNext()">
+      Skip
+    </button>
 </ion-content>
