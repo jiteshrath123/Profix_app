@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { Geolocation } from '@ionic-native/geolocation';
 import { IonicStorageModule } from '@ionic/storage';
-
+import { AgmCoreModule } from '@agm/core';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { EventsPage } from '../pages/events/events';
@@ -36,6 +36,11 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { AteaminfoPage } from '../pages/ateaminfo/ateaminfo';
 import { QrcodePage } from '../pages/qrcode/qrcode';
 import { GenerateObservable } from 'rxjs/observable/GenerateObservable';
+import { SetLocationPage } from '../pages/set-location/set-location';
+import { PlacePage } from '../pages/place/place';
+import { GeolocatePage } from '../pages/geolocate/geolocate';
+import { AddPlacePage } from '../pages/add-place/add-place';
+
 import { VerificationPage } from '../pages/aayam19/verification/verification';
 
 @NgModule({
@@ -65,13 +70,20 @@ import { VerificationPage } from '../pages/aayam19/verification/verification';
     MoviesPage,
     AteaminfoPage,
     QrcodePage,
+    AddPlacePage,
+    SetLocationPage,
+    PlacePage,
+    GeolocatePage,
     VerificationPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     NgxQRCodeModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB64xfKyWJlIc-1wtjw9F5dJ4foGwI6M5g'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -100,6 +112,10 @@ import { VerificationPage } from '../pages/aayam19/verification/verification';
     MainPage,
     AteaminfoPage,
     QrcodePage,
+    AddPlacePage,
+    SetLocationPage,
+    PlacePage,
+    GeolocatePage,
     VerificationPage
   ],
   providers: [
