@@ -1,6 +1,6 @@
 page-qrcode {
     ion-content{
-        background-image: url('../../assets/imgs/blue.jpg');
+        
         background-size: cover!important;
         text-align: center;
     }
@@ -10,5 +10,9 @@ page-qrcode {
         display:block;
         margin-top:auto;
         margin-bottom:auto;
+    }
+    .team_button{
+        background-color: darkred;
+        color: goldenrod;
     }
 }

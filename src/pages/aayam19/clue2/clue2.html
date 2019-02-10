@@ -3,7 +3,7 @@
   <ion-navbar>
     <ion-title>clue2</ion-title>
     <ion-buttons right>
-        <button ion-button menu-toggle icon-only><ion-icon name="help-buoy"></ion-icon></button>
+        <button ion-button menu-toggle icon-only (click)= "help()"><ion-icon name="help-buoy"></ion-icon></button>
       </ion-buttons>
     </ion-navbar>
 
@@ -31,5 +31,5 @@
           <button ion-button button color="danger" outline (click)="toNext()">
             Skip
           </button>
-        </div> 
+         </div> 
 </ion-content>

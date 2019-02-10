@@ -5,33 +5,31 @@
 </ion-header>
 
 <ion-content padding>
- <ion-card> <h1>
-    Avengers see their is one more page and decipher using the Quantum Realm
+ <ion-card> <h1 class="font">
+    Avengers see there is one more page and decipher using the Quantum Realm
     language. But they found a new mysterious clue and questions.
   </h1></ion-card>
     <ion-list>
-        <ion-list-header>
-           <h2><strong> Clues</strong></h2>
-          </ion-list-header>
-    <ion-item text-wrap>1. Ultron has mastery over mind, is approached by Iron-Man to seek
+    <ion-item class="A" text-wrap ><b>CLUES</b></ion-item>  
+    <ion-item class="B" text-wrap>1. Ultron has mastery over mind, is approached by Iron-Man to seek
       yellow stone.</ion-item>  
-    <ion-item text-wrap>2. Captain America and Red Skull are Men out of time, so he
+    <ion-item class="A" text-wrap>2. Captain America and Red Skull are Men out of time, so he
           goes to The Hydra Empire, for one last battle.</ion-item>
-    <ion-item text-wrap>3. Power stone not being
+    <ion-item class="B" text-wrap>3. Power stone not being
         blue, orange or red in colour would be approached by Nebula, to defeat his
         brother at New Xandar.</ion-item>
-    <ion-item text-wrap> 4. Reality is red, space in vault, time is green.</ion-item>
-    <ion-item text-wrap>5. Hulk unleashes intellect and world breaker rage to take down Ego, and seek
+    <ion-item class="A" text-wrap> 4. Reality is red, space in vault, time is green.</ion-item>
+    <ion-item class="B" text-wrap>5. Hulk unleashes intellect and world breaker rage to take down Ego, and seek
         orange stone. </ion-item>
-    <ion-item text-wrap> 6. Dormammu can control reality, is approached by Wong.</ion-item> 
-    <ion-item text-wrap>7. Thor goes to the Deadlands to defeat Hela, and take blue stone in vault.</ion-item> 
-    <ion-item text-wrap>8. Ultron has started transforming everyone into perfects.</ion-item> 
-    <ion-item text-wrap>9. Ego has taken out all over environment, and transform into wasteland.</ion-item> 
+    <ion-item class="A" text-wrap> 6. Dormammu can control reality, is approached by Wong.</ion-item> 
+    <ion-item class="B" text-wrap>7. Thor goes to the Deadlands to defeat Hela, and take blue stone in vault.</ion-item> 
+    <ion-item class="A" text-wrap>8. Ultron has started transforming everyone into perfects.</ion-item> 
+    <ion-item class="B" text-wrap>9. Ego has taken out all over environment, and transform into wasteland.</ion-item> 
   </ion-list>
   
   <h3>Solve it.</h3>
-  <ion-list>
-    <ion-card *ngIf="visible0">
+  <ion-list >
+    <ion-card  class="container"*ngIf="visible0">
       <h3>The Man Out of time is approaching which villain?</h3>
       <ion-item>
         <ion-label floating>De-coded Answer</ion-label>
@@ -39,12 +37,14 @@
        </ion-item>
        <button ion-button button color="energy" (click)="checkIn1()">Check</button>
       </ion-card>
-    <ion-card *ngIf="visible1">
+    <ion-card class="card" *ngIf="visible1">
       <h3>Which villain rules the Deadland?</h3>
+      <br>
       <ion-item>
         <ion-label floating>De-coded Answer</ion-label>
         <ion-input type="text" #cob2></ion-input>
       </ion-item>
+      <br>
       <button ion-button button color="energy" (click)="checkIn2()">Check</button>
       </ion-card>
     <ion-card *ngIf="visible2">
@@ -81,6 +81,7 @@
         <ion-input type="text" #cob6></ion-input>
       </ion-item>
       <button ion-button button color="energy" (click)="checkIn6()">Check</button>
+      <br>
     </ion-card>
   </ion-list>
 
@@ -90,7 +91,8 @@
     </button>
   </div>
   
-  <button ion-button button color="secondary" outline (click)="toNext()">
+  <button ion-button button large round block color="secondary" outline (click)="toNext()">
       Skip
     </button>
-</ion-content>
+  
+  </ion-content>
