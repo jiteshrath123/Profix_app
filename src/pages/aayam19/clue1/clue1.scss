@@ -4,10 +4,10 @@ page-clue1{
   text-align: center;
   }
   .content{
-    background-color: lightgoldenrodyellow;
+    background-color: goldenrod;
   }
   ion-thumbnail{
-    border: 3px dotted darkred;
+    border: 3px dotted darkblue;
     background-color: rgb(231, 194, 99);
   }
   ion-card{
@@ -15,7 +15,7 @@ page-clue1{
   }
   
   .button{
-    background-color: darkred;
-    color: aliceblue;
+    background-color: darkblue;
+    color: goldenrod;
   } 
 }

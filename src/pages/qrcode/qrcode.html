@@ -5,12 +5,31 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="scanCode()">Scan the QR CODE</button>
-  <button ion-button (click)="skip()">Skip</button>
-  <ion-card *ngIf="scannedCode">
-    <ion-card-content>
-      <p></p>
-    </ion-card-content>
-  </ion-card>
-  <h1 *ngIf="error">Wrong Code Try Again</h1>
+    <ion-card>
+        <button ion-button (click)="scanCode()">
+        <ion-card-content>
+            <ion-icon class="icons" name="infinite" item-start></ion-icon> 
+            <ion-card-title>
+             Scan 
+            </ion-card-title>
+          <hr>
+        </ion-card-content>
+        </button>
+      </ion-card>
+
+      <div >
+          <button class="team_button" ion-button large block round icon-start (click)="skip()">
+              <ion-icon name='people'></ion-icon>
+            Skip</button>
+        </div>
+
+        <ion-card *ngIf="scannedCode">
+            <ion-card-content>
+              <p></p>
+            </ion-card-content>
+          </ion-card>
+          <h1 *ngIf="error">Wrong Code Try Again</h1>
 </ion-content>
+
+
+

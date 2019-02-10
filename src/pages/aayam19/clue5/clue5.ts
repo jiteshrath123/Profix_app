@@ -9,10 +9,7 @@ import { SixthqrPage } from '../../sixthqr/sixthqr';
 })
 export class Clue5Page {
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
-<<<<<<< HEAD
 
-=======
->>>>>>> 794ee251c9907e50f05f7027c9048363de4a0d2c
   toNext() {
     this.navCtrl.push(SixthqrPage);
   }
