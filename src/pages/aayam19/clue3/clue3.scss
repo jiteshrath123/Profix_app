@@ -1,6 +1,6 @@
 page-clue3 {
     ion-content{
-        background-image: url('../../../assets/imgs/blue1.jpg');
+        background-image:  url('../../../assets/imgs/clue0b.jpg');;
         background-size: cover!important;
         text-align: center;
     }
@@ -9,20 +9,31 @@ page-clue3 {
         text-align: center;
     }
     ion-row{
-        background-image: url('../../../assets/imgs/white.jpg');
-        border: 2px solid;
+        background-color: lightgrey;
+        border: 2px solid darkblue;
     }
 
     ion-col{
-        background-image: url('../../../assets/imgs/white.jpg');
-        border: 2px solid;
+        background-color:lightgoldenrodyellow;
+        border: 2px solid darkblue;
     }
     ion-item {
         color: lightgray;
          box-shadow: none;
-         border: 4px;
-         border-radius : 17px;
-       }
+         border: 4px;;
+       }   
+    .A{
+        background-color: darkred;
+        color:rgb(230, 190, 89);
+    }
+    .B{
+        background-color: rgb(230, 190, 89);
+        color: darkred;
+    }
     
+    h2{
+        color: goldenrod;
+    }
     
+
 }
