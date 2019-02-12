@@ -32,7 +32,7 @@ export class Clue1Page {
           {
             text: 'OK!',
             handler: () => {
-              this.navCtrl.push(SecondqrPage);
+              this.navCtrl.push(Clue2Page);
             }
           }
         ]
@@ -41,6 +41,6 @@ export class Clue1Page {
     }
   }
   toNext() {
-    this.navCtrl.push(SecondqrPage);
+    this.navCtrl.push(Clue2Page);
   }
 }
