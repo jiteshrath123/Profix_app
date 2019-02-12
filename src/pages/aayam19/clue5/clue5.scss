@@ -1,8 +1,20 @@
 page-clue5 {
     ion-content{
-        background-image: url('../../../assets/imgs/blue1.jpg');
+        background-image: url('../../../assets/imgs/clue0b.jpg');
         background-size: cover!important;
         text-align: center;
     }
+    .A{
+        background-color: darkred;
+        color:rgb(230, 190, 89);
+    }
+    .B{
+        background-color: rgb(230, 190, 89);
+        color: darkred;
+    }
+    .button{
+    
+        color: aliceblue;
+      } 
    
 }
