@@ -47,6 +47,8 @@ import { ThirdqrPage } from '../pages/thirdqr/thirdqr';
 import { FourthqrPage } from '../pages/fourthqr/fourthqr';
 import { FifthqrPage } from '../pages/fifthqr/fifthqr';
 import { SixthqrPage } from '../pages/sixthqr/sixthqr';
+import { Geofence } from '@ionic-native/geofence';
+import { Geolocation, GeolocationOriginal } from '@ionic-native/geolocation';
 
 
 @NgModule({
@@ -140,7 +142,8 @@ import { SixthqrPage } from '../pages/sixthqr/sixthqr';
     ScreenOrientation,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthProvider,
-    BarcodeScanner
-  ]
+    BarcodeScanner,
+    Geofence
+   ]
 })
 export class AppModule {}

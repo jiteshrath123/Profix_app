@@ -30,7 +30,7 @@ export class Clue6Page {
       id: '1_5_9_13', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -43,7 +43,7 @@ export class Clue6Page {
       id: '2_6_10_14', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -56,7 +56,7 @@ export class Clue6Page {
       id: '3_7_11_15', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -69,7 +69,7 @@ export class Clue6Page {
       id: '4_8_12_16', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -82,7 +82,7 @@ export class Clue6Page {
       id: '17_21_25_29', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -95,7 +95,7 @@ export class Clue6Page {
       id: '18_22_26_30', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -108,7 +108,7 @@ export class Clue6Page {
       id: '19_23_27_31', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -121,7 +121,7 @@ export class Clue6Page {
       id: '20_24_28_32', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -134,7 +134,7 @@ export class Clue6Page {
       id: '33_37_41_45', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -147,7 +147,7 @@ export class Clue6Page {
       id: '34_38_42_46', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -160,7 +160,7 @@ export class Clue6Page {
       id: '35_39_43_47', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -173,7 +173,7 @@ export class Clue6Page {
       id: '36_40_44_48', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -186,7 +186,7 @@ export class Clue6Page {
       id: '49_53_57_61', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -199,7 +199,7 @@ export class Clue6Page {
       id: '50_54_58_62', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -212,7 +212,7 @@ export class Clue6Page {
       id: '51_55_59_63', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
@@ -225,7 +225,7 @@ export class Clue6Page {
       id: '52_56_60_64', //any unique ID
       latitude:       37.285951, //center of geofence radius
       longitude:      -121.936650,
-      radius:         100, //radius to edge of geofence in meters
+      radius:         20, //radius to edge of geofence in meters
       transitionType: 3, //see 'Transition Types' below
       notification: { //notification settings
           id:             1, //any unique ID
