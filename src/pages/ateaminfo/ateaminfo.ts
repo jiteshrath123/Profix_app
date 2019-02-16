@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Clue0aPage } from '../aayam19/clue0a/clue0a';
 import { AuthProvider } from '../../providers/auth/auth';
 import firebase from 'firebase';
+import { FuelPage } from '../aayam19/fuel/fuel';
 
 @Component({
   selector: 'page-ateaminfo',
@@ -27,6 +27,6 @@ export class AteaminfoPage {
   }
 
   play() {
-    this.navCtrl.push(Clue0aPage);
+    this.navCtrl.push(FuelPage);
   }
 }

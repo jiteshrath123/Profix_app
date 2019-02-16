@@ -35,12 +35,6 @@ import { MoviesPage } from '../pages/aayam19/movies/movies';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { AteaminfoPage } from '../pages/ateaminfo/ateaminfo';
 import { QrcodePage } from '../pages/qrcode/qrcode';
-
-import { SetLocationPage } from '../pages/set-location/set-location';
-import { PlacePage } from '../pages/place/place';
-import { GeolocatePage } from '../pages/geolocate/geolocate';
-import { AddPlacePage } from '../pages/add-place/add-place';
-
 import { VerificationPage } from '../pages/aayam19/verification/verification';
 import { SecondqrPage } from '../pages/secondqr/secondqr';
 import { ThirdqrPage } from '../pages/thirdqr/thirdqr';
@@ -49,6 +43,7 @@ import { FifthqrPage } from '../pages/fifthqr/fifthqr';
 import { SixthqrPage } from '../pages/sixthqr/sixthqr';
 import { Geofence } from '@ionic-native/geofence';
 import { Geolocation, GeolocationOriginal } from '@ionic-native/geolocation';
+import { FuelPage } from '../pages/aayam19/fuel/fuel';
 
 
 @NgModule({
@@ -78,16 +73,13 @@ import { Geolocation, GeolocationOriginal } from '@ionic-native/geolocation';
     MoviesPage,
     AteaminfoPage,
     QrcodePage,
-    AddPlacePage,
-    SetLocationPage,
-    PlacePage,
-    GeolocatePage,
     VerificationPage,
     SecondqrPage,
     ThirdqrPage,
     FourthqrPage,
     FifthqrPage,
-    SixthqrPage
+    SixthqrPage,
+    FuelPage
   ],
   imports: [
     BrowserModule,
@@ -125,16 +117,13 @@ import { Geolocation, GeolocationOriginal } from '@ionic-native/geolocation';
     MainPage,
     AteaminfoPage,
     QrcodePage,
-    AddPlacePage,
-    SetLocationPage,
-    PlacePage,
-    GeolocatePage,
     VerificationPage,
     SecondqrPage,
     ThirdqrPage,
     FourthqrPage,
     FifthqrPage,
-    SixthqrPage
+    SixthqrPage,
+    FuelPage
   ],
   providers: [
     StatusBar,

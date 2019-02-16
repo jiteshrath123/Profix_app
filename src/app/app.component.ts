@@ -8,7 +8,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { Welcome } from '../pages/welcome/welcome';
 import { MainPage } from '../pages/main/main';
 import { QrcodePage } from '../pages/qrcode/qrcode';
-import { GeolocatePage } from '../pages/geolocate/geolocate';
 @Component({
   templateUrl: 'app.html'
 })

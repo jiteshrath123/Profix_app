@@ -3,23 +3,31 @@
 </ion-header>
 
 <ion-content padding>
-    <div >
-        <button class="logout" icon-start ion-button large  float-right (click)="logout()">
-          <ion-icon name="log-out"></ion-icon>
-          Quit Playing
-        </button>
-      </div>
+  <ion-list><h1>In the Aftermath of Avengers Infinity War, Thanos exactly did what he planed.</h1></ion-list>
+    <div class="splash-bg"></div>
+  <div class="splash-info">
+    <div class="splash-logo"></div>
+    <div class="splash-intro">
+    </div>
+  </div>
+  <ion-list><h2>He wiped 50% of the living creatures.</h2>
 
+<h3>Start with entering your team member.</h3></ion-list>
    <div >
     <button class="team_button" ion-button large block round icon-start (click)="toEnterTeam()">
         <ion-icon name='people'></ion-icon>
       Enter Team</button>
   </div>
-  
+  <h3></h3>
   <div >
     <button class="team_button" ion-button icon-start large block round size="large" (click)="toTeam()">
       <ion-icon name='people'></ion-icon>
       Your Team</button>
   </div>
-  
+  <div >
+      <button class="logout" icon-start ion-button large  float-right (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+        Quit Playing
+      </button>
+    </div>  
 </ion-content>

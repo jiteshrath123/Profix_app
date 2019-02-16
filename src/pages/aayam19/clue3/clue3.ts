@@ -67,6 +67,6 @@ export class Clue3Page {
     }
   }
   toNext() {
-    this.navCtrl.push(FifthqrPage);
+    this.navCtrl.push(FourthqrPage);
   }
 }

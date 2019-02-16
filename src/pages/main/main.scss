@@ -1,6 +1,6 @@
 page-main {
     .content{
-        background-color: lightgoldenrodyellow;
+        background-image: url('../../assets/imgs/galaxy.jpg');
     }
     .title{
         color: cornsilk;
@@ -14,4 +14,44 @@ page-main {
         background-color: darkred;
         color: beige;
     }
+    ion-list{
+        background-color: transparent;
+        color: antiquewhite;
+    }
+    .splash-bg {
+        position: relative;
+        background: url('../../assets/imgs/infinity war.jpg') no-repeat transparent;
+        background-size: cover;
+        height: 45%;
+        z-index: 1;
+        background-repeat: repeat-x;
+        animation: animatedBackground 40s linear infinite;
+      }
+    
+      @keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+      }
+    
+      .splash-info {
+        position: relative;
+        z-index: 2;
+        margin-top: -64px;
+        text-align: center;
+      }
+      .splash-logo {
+        margin: auto;
+        background: url('../../assets/imgs/neonlogo.jpg') repeat transparent;
+        background-size: 100%;
+        width: 128px;
+        height: 128px;
+        border-radius: 50px;
+      }
+      .splash-intro {
+        font-size: 18px;
+        font-weight: bold;
+        max-width: 80%;
+        margin: auto;
+      }
+      
 }
