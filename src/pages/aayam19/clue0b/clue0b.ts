@@ -42,7 +42,7 @@ export class Clue0bPage {
     }
   }
   checkIn3() {
-    if (this.cob3.value.toUpperCase() == 'PERFECTION AND YELLOW') {
+    if (this.cob3.value.toUpperCase() == 'PERFECTION') {
       this.visible2 = false;
       this.visible3 = true;
     }
@@ -54,29 +54,20 @@ export class Clue0bPage {
     }
   }
   checkIn5() {
-    if (this.cob5.value.toUpperCase() == 'WONG AND DORMAMMU') {
+    if (this.cob5.value.toUpperCase() == 'DORMAMMU') {
       this.visible4 = false;
       this.visible5 = true;
     }
   }
   checkIn6() {
-    if (this.cob6.value.toUpperCase() == 'THE DEADLANDS') {
+    if (this.cob6.value.toUpperCase() == 'DEADLANDS') {
       this.visible5 = false;
       this.visible6 = true;
     }
   }
   
   signIn() {
-    if (
-
-      (this.cob1.value == 'RED SKULL',
-      this.cob2.value == 'HELA',
-      this.cob3.value == 'PERFECTION AND YELLOW',
-      this.cob4.value == 'GAMORA AND RONAN',
-      this.cob5.value == 'WONG AND DORMAMMU',
-      this.cob6.value == 'THE DEADLANDS')
-
-    ) {
+    {
       const confirm = this.alertCtrl.create({
         title: ' Congratulation The Battle World Clue is Solved ',
         message: 'Your Rank is',

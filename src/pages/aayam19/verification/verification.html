@@ -14,13 +14,7 @@
           </ion-content>
   
     <button class="team_button" ion-button large block round icon-start (click)="scanCode()">Scan the QR CODE</button>
-    <ion-card *ngIf="scannedCode">
-      <ion-card-content>
-        <p>Vlaue: {{ scannedCode }}</p>
-      </ion-card-content>
-    </ion-card>
-    <h1 *ngIf="error">Wrong Code Try Again</h1>
-  
+    
     <div>
     <button class="team_button" ion-button large block round icon-start color="secondary" outline (click)="toNext()">
         Skip

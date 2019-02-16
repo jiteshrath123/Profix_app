@@ -20,10 +20,6 @@ export class MainPage {
   toEnterTeam() {
     this.navCtrl.push(EnterTeamPage);
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MainPage');
-  }
   logout() {
     this.authService.logout();
   }

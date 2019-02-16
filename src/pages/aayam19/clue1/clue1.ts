@@ -23,7 +23,7 @@ export class Clue1Page {
 
   signIn() {
     if (
-      (this.cname.value == 'CAPTAIN MARVEL', this.cpassword.value == '9851')
+      (this.cname.value.toUpperCase() == 'CAPTAIN MARVEL', this.cpassword.value == '9851')
     ) {
       const confirm = this.alertCtrl.create({
         title: ' Captain Marvel has arrived',
@@ -32,7 +32,7 @@ export class Clue1Page {
           {
             text: 'OK!',
             handler: () => {
-              this.navCtrl.push(SecondqrPage);
+              this.navCtrl.push(Clue2Page);
             }
           }
         ]
@@ -41,6 +41,6 @@ export class Clue1Page {
     }
   }
   toNext() {
-    this.navCtrl.push(SecondqrPage);
+    this.navCtrl.push(Clue2Page);
   }
 }
