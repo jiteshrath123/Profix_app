@@ -156,7 +156,7 @@ export class VerificationPage {
                 {
                   text: 'OK!',
                   handler: () => {
-                  }
+                }
                 }
               ]
             });
