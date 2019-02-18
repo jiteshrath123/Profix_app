@@ -1,8 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, App } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { TabsPage } from '../../tabs/tabs';
 import { ThirdqrPage } from '../../thirdqr/thirdqr';
+import { Storage } from '@ionic/storage';
+import { AuthProvider } from '../../../providers/auth/auth';
 
 @Component({
   selector: 'page-clue2',
@@ -14,7 +16,10 @@ export class Clue2Page {
 
   constructor(
     public navCtrl: NavController,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public storage: Storage,
+    public appCtrl: App,
+    public authService: AuthProvider
   ) {
     this.attempt = 0;
   }
@@ -69,5 +74,15 @@ export class Clue2Page {
 
   toNext() {
     this.navCtrl.push(ThirdqrPage);
+  }
+  logout() {
+    this.authService.logout();
+    this.storage.set('teamid', '');
+    this.storage.remove('teamid');
+    this.storage.set('team', '');
+    this.storage.remove('team');
+    this.storage.set('status', '');
+    this.storage.remove('status');
+    this.appCtrl.getRootNavs()[0].setRoot(TabsPage);
   }
 }

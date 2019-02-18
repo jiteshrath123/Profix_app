@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Clue4Page } from '../aayam19/clue4/clue4';
+import { Storage } from '@ionic/storage';
+import firebase from 'firebase';
 
 @Component({
   selector: 'page-fourthqr',
@@ -14,7 +16,8 @@ export class FourthqrPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public barcode: BarcodeScanner
+    public barcode: BarcodeScanner,
+    public storage: Storage
   ) {}
 
   ionViewDidLoad() {
@@ -24,13 +27,29 @@ export class FourthqrPage {
     this.barcode.scan().then(barcodeData => {
       this.scannedCode = barcodeData.text;
       if (this.scannedCode == 'fourthQRCode') {
-        this.navCtrl.setRoot(Clue4Page);
+        this.storage.get('teamid').then(val => {
+          const statusRef: firebase.database.Reference = firebase
+            .database()
+            .ref(`/teams/` + val + '/status/');
+          statusRef.set(8).then((res: Response) => {
+            this.storage.set('status', 8);
+            this.navCtrl.setRoot(Clue4Page);
+          });
+        });
       } else {
         this.error = true;
       }
     });
   }
   skip() {
-    this.navCtrl.setRoot(Clue4Page);
+    this.storage.get('teamid').then(val => {
+      const statusRef: firebase.database.Reference = firebase
+        .database()
+        .ref(`/teams/` + val + '/status/');
+      statusRef.set(8).then((res: Response) => {
+        this.storage.set('status', 8);
+        this.navCtrl.setRoot(Clue4Page);
+      });
+    });
   }
 }

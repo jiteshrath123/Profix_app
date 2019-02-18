@@ -6,6 +6,7 @@ import { MainPage } from '../../main/main';
 import { Storage } from '@ionic/storage';
 import firebase from 'firebase';
 import { HttpClient } from '@angular/common/http/';
+import { FuelPage } from '../fuel/fuel';
 
 @Component({
   selector: 'page-register',
@@ -110,12 +111,6 @@ export class RegisterPage {
     this.authService
       .signin(this.cname.value, this.cpassword.value)
       .then(data => {
-        loading.dismiss();
-        const al = this.alertCtrl.create({
-          title: 'Sign In Successful',
-          buttons: ['ok']
-        });
-        al.present();
         let teamid = this.authService.getActiveUser().uid;
         this.storage.set('teamid', teamid);
         console.log(teamid);
@@ -130,8 +125,14 @@ export class RegisterPage {
           .ref(`/teams/` + teamid + '/members/');
         personRef.on('value', personSnapshot => {
           this.storage.set('team', personSnapshot.val());
-          this.appCtrl.getRootNavs()[0].setRoot(MainPage);
         });
+        this.appCtrl.getRootNavs()[0].setRoot(FuelPage);
+        loading.dismiss();
+        const al = this.alertCtrl.create({
+          title: 'Sign In Successful',
+          buttons: ['ok']
+        });
+        al.present();
       })
       .catch(error => {
         loading.dismiss();

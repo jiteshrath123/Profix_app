@@ -12,6 +12,7 @@ import { Clue2Page } from '../clue2/clue2';
 import { Clue3Page } from '../clue3/clue3';
 import { Clue4Page } from '../clue4/clue4';
 import { Clue5Page } from '../clue5/clue5';
+import { Clue6Page } from '../clue6/clue6';
 
 @Component({
   selector: 'page-fuel',
@@ -44,6 +45,8 @@ export class FuelPage {
         this.navCtrl.setRoot(Clue4Page);
       } else if (val == 9) {
         this.navCtrl.setRoot(Clue5Page);
+      } else if (val == 10) {
+        this.navCtrl.setRoot(Clue6Page);
       }
     });
   }

@@ -1,9 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, App } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { Clue0bPage } from '../clue0b/clue0b';
 import firebase from 'firebase';
 import { Storage } from '@ionic/storage';
+import { AuthProvider } from '../../../providers/auth/auth';
+import { TabsPage } from '../../tabs/tabs';
 @Component({
   selector: 'page-clue0a',
   templateUrl: 'clue0a.html'
@@ -26,7 +28,9 @@ export class Clue0aPage {
   constructor(
     public navCtrl: NavController,
     public alertCtrl: AlertController,
-    public storage: Storage
+    public storage: Storage,
+    public authService: AuthProvider,
+    public appCtrl: App
   ) {}
 
   checkIn1() {
@@ -116,5 +120,15 @@ export class Clue0aPage {
         this.navCtrl.setRoot(Clue0bPage);
       });
     });
+  }
+  logout() {
+    this.authService.logout();
+    this.storage.set('teamid', '');
+    this.storage.remove('teamid');
+    this.storage.set('team', '');
+    this.storage.remove('team');
+    this.storage.set('status', '');
+    this.storage.remove('status');
+    this.appCtrl.getRootNavs()[0].setRoot(TabsPage);
   }
 }

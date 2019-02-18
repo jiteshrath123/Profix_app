@@ -1,7 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, App } from 'ionic-angular';
 import { FifthqrPage } from '../../fifthqr/fifthqr';
-
+import { Storage } from '@ionic/storage';
+import { AuthProvider } from '../../../providers/auth/auth';
+import { TabsPage } from '../../tabs/tabs';
 @Component({
   selector: 'page-clue4',
   templateUrl: 'clue4.html'
@@ -26,7 +28,10 @@ export class Clue4Page {
 
   constructor(
     public navCtrl: NavController,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public storage: Storage,
+    public appCtrl: App,
+    public authService: AuthProvider
   ) {}
   signIn() {
     if (
@@ -64,5 +69,15 @@ export class Clue4Page {
   }
   toNext() {
     this.navCtrl.push(FifthqrPage);
+  }
+  logout() {
+    this.authService.logout();
+    this.storage.set('teamid', '');
+    this.storage.remove('teamid');
+    this.storage.set('team', '');
+    this.storage.remove('team');
+    this.storage.set('status', '');
+    this.storage.remove('status');
+    this.appCtrl.getRootNavs()[0].setRoot(TabsPage);
   }
 }
