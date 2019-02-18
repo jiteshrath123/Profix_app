@@ -10,15 +10,12 @@ import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-rules',
-  templateUrl: 'rules.html',
+  templateUrl: 'rules.html'
 })
 export class RulesPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RulesPage');
   }
-
 }

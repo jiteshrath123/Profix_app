@@ -3,25 +3,26 @@ import { Platform, NavController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import firebase from 'firebase';
+import { Storage } from '@ionic/storage';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { Welcome } from '../pages/welcome/welcome';
-import { MainPage } from '../pages/main/main';
-import { QrcodePage } from '../pages/qrcode/qrcode';
+import { FuelPage } from '../pages/aayam19/fuel/fuel';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   tabsPage: any = TabsPage;
   rootPage: any = this.tabsPage;
-  mainPage: any = MainPage;
+  mainPage: any = FuelPage;
   isAuthenticate = false;
+  logincheck: any;
   @ViewChild('nav') nav: NavController;
 
   constructor(
     platform: Platform,
     statusBar: StatusBar,
-    splashScreen: SplashScreen
+    splashScreen: SplashScreen,
+    storage: Storage
   ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -39,15 +40,19 @@ export class MyApp {
       storageBucket: 'endgame-23793.appspot.com',
       messagingSenderId: '679101307207'
     };
+
     firebase.initializeApp(config);
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        this.isAuthenticate = true;
-        this.nav.setRoot(this.mainPage);
-      } else {
-        this.isAuthenticate = false;
-        this.nav.setRoot(this.tabsPage);
-      }
+    storage.ready().then(() => {
+      this.logincheck = storage.get('teamid').then(val => {
+        this.logincheck = val;
+        if (this.logincheck) {
+          this.isAuthenticate = true;
+          this.nav.setRoot(this.mainPage);
+        } else {
+          this.isAuthenticate = false;
+          this.nav.setRoot(this.tabsPage);
+        }
+      });
     });
   }
 }

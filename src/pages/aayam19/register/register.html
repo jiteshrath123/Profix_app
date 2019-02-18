@@ -9,6 +9,12 @@
       <ion-label color="primary" floating>Email</ion-label>
       <ion-input  type="text" #crname></ion-input>
     </ion-item>
+    <ion-item >
+      <ion-label color="primary" floating>Phone</ion-label>
+      <ion-input  type="Phone" #num></ion-input>
+    </ion-item>
+    
+    
 
     <ion-item>
       <ion-label color="primary" floating>Password</ion-label>
@@ -23,5 +29,9 @@
       <button ion-button button float-left class="submit-button"  (click)="signUp()">
       REGISTER 
     </button>
+    <button ion-button button center class="submit-button"  (click)="reset()">
+      Forgot Password 
+    </button>
+    <h2 *ngIf="link">Password Reset Link is Sent Your Email</h2>
   </div>
 </ion-content>

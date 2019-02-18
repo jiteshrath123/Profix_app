@@ -4,10 +4,9 @@ import { EventsPage } from '../events/events';
 
 @Component({
   selector: 'page-tabs',
-  templateUrl: 'tabs.html',
+  templateUrl: 'tabs.html'
 })
 export class TabsPage {
-  homePage=HomePage;
-  eventsPage=EventsPage;
- 
+  homePage = HomePage;
+  eventsPage = EventsPage;
 }

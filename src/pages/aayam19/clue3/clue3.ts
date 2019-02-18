@@ -1,10 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Clue4Page } from '../clue4/clue4';
 import { AlertController } from 'ionic-angular';
-import { QrcodePage } from '../../qrcode/qrcode';
 import { FourthqrPage } from '../../fourthqr/fourthqr';
-import { FifthqrPage } from '../../fifthqr/fifthqr';
 
 @Component({
   selector: 'page-clue3',

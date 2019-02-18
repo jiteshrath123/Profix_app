@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
-
+import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { AgmCoreModule } from '@agm/core';
 import { MyApp } from './app.component';
@@ -44,7 +44,8 @@ import { SixthqrPage } from '../pages/sixthqr/sixthqr';
 import { Geofence } from '@ionic-native/geofence';
 import { Geolocation, GeolocationOriginal } from '@ionic-native/geolocation';
 import { FuelPage } from '../pages/aayam19/fuel/fuel';
-
+import { PaymentConfirmPage } from '../pages/payment-confirm/payment-confirm';
+import { StartPage } from '../pages/start/start';
 
 @NgModule({
   declarations: [
@@ -79,12 +80,15 @@ import { FuelPage } from '../pages/aayam19/fuel/fuel';
     FourthqrPage,
     FifthqrPage,
     SixthqrPage,
-    FuelPage
+    FuelPage,
+    PaymentConfirmPage,
+    StartPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     NgxQRCodeModule,
+    HttpClientModule,
     IonicStorageModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB64xfKyWJlIc-1wtjw9F5dJ4foGwI6M5g'
@@ -123,7 +127,9 @@ import { FuelPage } from '../pages/aayam19/fuel/fuel';
     FourthqrPage,
     FifthqrPage,
     SixthqrPage,
-    FuelPage
+    FuelPage,
+    PaymentConfirmPage,
+    StartPage
   ],
   providers: [
     StatusBar,
@@ -133,6 +139,6 @@ import { FuelPage } from '../pages/aayam19/fuel/fuel';
     AuthProvider,
     BarcodeScanner,
     Geofence
-   ]
+  ]
 })
 export class AppModule {}

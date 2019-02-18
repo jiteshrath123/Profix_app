@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import firebase from 'firebase';
+import { AlertController } from 'ionic-angular';
 /*
   Generated class for the AuthProvider provider.
 
@@ -8,7 +9,7 @@ import firebase from 'firebase';
 */
 @Injectable()
 export class AuthProvider {
-  constructor() {
+  constructor(public alertCtrl: AlertController) {
     console.log('Hello AuthProvider Provider');
   }
   signup(email: string, password: string) {
@@ -24,6 +25,22 @@ export class AuthProvider {
     return firebase.auth().currentUser;
   }
   resetPassword(email: string) {
-    firebase.auth().sendPasswordResetEmail(email);
+    firebase
+      .auth()
+      .sendPasswordResetEmail(email)
+      .then(res => {
+        const al = this.alertCtrl.create({
+          title: 'Password Reset Link has been sent on your Email',
+          buttons: ['ok']
+        });
+        al.present();
+      })
+      .catch(res => {
+        const al = this.alertCtrl.create({
+          title: res,
+          buttons: ['ok']
+        });
+        al.present();
+      });
   }
 }
