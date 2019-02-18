@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { Clue0bPage } from '../clue0b/clue0b';
+import firebase from 'firebase';
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'page-clue0a',
   templateUrl: 'clue0a.html'
@@ -13,7 +15,7 @@ export class Clue0aPage {
   @ViewChild('cc4') cc4;
   @ViewChild('cc5') cc5;
   @ViewChild('cc6') cc6;
-  
+
   visible1 = true;
   visible2 = false;
   visible3 = false;
@@ -23,7 +25,8 @@ export class Clue0aPage {
   visible7 = false;
   constructor(
     public navCtrl: NavController,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public storage: Storage
   ) {}
 
   checkIn1() {
@@ -210,7 +213,15 @@ export class Clue0aPage {
           {
             text: 'OK!',
             handler: () => {
-              this.navCtrl.push(Clue0bPage);
+              this.storage.get('teamid').then(val => {
+                const statusRef: firebase.database.Reference = firebase
+                  .database()
+                  .ref(`/teams/` + val + '/status/');
+                statusRef.set(3).then((res: Response) => {
+                  this.storage.set('status', 3);
+                  this.navCtrl.setRoot(Clue0bPage);
+                });
+              });
             }
           }
         ]
@@ -219,6 +230,14 @@ export class Clue0aPage {
     
   }
   tonext() {
-    this.navCtrl.push(Clue0bPage);
+    this.storage.get('teamid').then(val => {
+      const statusRef: firebase.database.Reference = firebase
+        .database()
+        .ref(`/teams/` + val + '/status/');
+      statusRef.set(3).then((res: Response) => {
+        this.storage.set('status', 3);
+        this.navCtrl.setRoot(Clue0bPage);
+      });
+    });
   }
 }

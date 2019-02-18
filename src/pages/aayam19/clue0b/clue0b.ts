@@ -1,11 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-
-import { QrcodePage } from '../../qrcode/qrcode';
 import { VerificationPage } from '../verification/verification';
-
-
+import firebase from 'firebase';
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'page-clue0b',
   templateUrl: 'clue0b.html'
@@ -26,7 +24,8 @@ export class Clue0bPage {
   visible6 = false;
   constructor(
     public navCtrl: NavController,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public storage: Storage
   ) {}
 
   checkIn1() {
@@ -204,7 +203,7 @@ export class Clue0bPage {
       confirm.present();
     }
   }
-  
+
   signIn() {
     {
       const confirm = this.alertCtrl.create({
@@ -214,7 +213,15 @@ export class Clue0bPage {
           {
             text: 'OK!',
             handler: () => {
-              this.navCtrl.push(VerificationPage);
+              this.storage.get('teamid').then(val => {
+                const statusRef: firebase.database.Reference = firebase
+                  .database()
+                  .ref(`/teams/` + val + '/status/');
+                statusRef.set(4).then((res: Response) => {
+                  this.storage.set('status', 4);
+                  this.navCtrl.setRoot(VerificationPage);
+                });
+              });
             }
           }
         ]
@@ -223,7 +230,14 @@ export class Clue0bPage {
     }
   }
   toNext() {
-    this.navCtrl.push(VerificationPage);
+    this.storage.get('teamid').then(val => {
+      const statusRef: firebase.database.Reference = firebase
+        .database()
+        .ref(`/teams/` + val + '/status/');
+      statusRef.set(4).then((res: Response) => {
+        this.storage.set('status', 4);
+        this.navCtrl.setRoot(VerificationPage);
+      });
+    });
   }
-  
 }

@@ -1,7 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-import { Clue5Page } from '../clue5/clue5';
-import { QrcodePage } from '../../qrcode/qrcode';
 import { FifthqrPage } from '../../fifthqr/fifthqr';
 
 @Component({

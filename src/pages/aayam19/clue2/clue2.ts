@@ -1,12 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-import { Clue3Page } from '../clue3/clue3';
 import { TabsPage } from '../../tabs/tabs';
-import { QrcodePage } from '../../qrcode/qrcode';
 import { ThirdqrPage } from '../../thirdqr/thirdqr';
-
-
 
 @Component({
   selector: 'page-clue2',
@@ -16,10 +12,13 @@ export class Clue2Page {
   attempt: number;
   @ViewChild('day') day;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-    this.attempt=0;
+  constructor(
+    public navCtrl: NavController,
+    public alertCtrl: AlertController
+  ) {
+    this.attempt = 0;
   }
-  help(){
+  help() {
     window.open('https://www.instagram.com/profix.in/', '_system');
   }
 
