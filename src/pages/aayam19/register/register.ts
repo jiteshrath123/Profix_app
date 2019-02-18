@@ -119,6 +119,13 @@ export class RegisterPage {
           .ref(`/teams/` + teamid + '/status/');
         statusRef.on('value', personSnapshot => {
           this.storage.set('status', personSnapshot.val());
+          this.appCtrl.getRootNavs()[0].setRoot(FuelPage);
+          loading.dismiss();
+          const al = this.alertCtrl.create({
+            title: 'Sign In Successful',
+            buttons: ['ok']
+          });
+          al.present();
         });
         const personRef: firebase.database.Reference = firebase
           .database()
@@ -126,13 +133,6 @@ export class RegisterPage {
         personRef.on('value', personSnapshot => {
           this.storage.set('team', personSnapshot.val());
         });
-        this.appCtrl.getRootNavs()[0].setRoot(FuelPage);
-        loading.dismiss();
-        const al = this.alertCtrl.create({
-          title: 'Sign In Successful',
-          buttons: ['ok']
-        });
-        al.present();
       })
       .catch(error => {
         loading.dismiss();

@@ -26,28 +26,30 @@ export class FuelPage {
   ) {}
 
   ionViewDidLoad() {
-    this.storage.get('status').then(val => {
-      if (val == 1) {
-        this.navCtrl.setRoot(MainPage);
-      } else if (val == 2) {
-        this.navCtrl.setRoot(AteaminfoPage);
-      } else if (val == 3) {
-        this.navCtrl.setRoot(Clue0bPage);
-      } else if (val == 4) {
-        this.navCtrl.setRoot(VerificationPage);
-      } else if (val == 5) {
-        this.navCtrl.setRoot(Clue1Page);
-      } else if (val == 6) {
-        this.navCtrl.setRoot(Clue2Page);
-      } else if (val == 7) {
-        this.navCtrl.setRoot(Clue3Page);
-      } else if (val == 8) {
-        this.navCtrl.setRoot(Clue4Page);
-      } else if (val == 9) {
-        this.navCtrl.setRoot(Clue5Page);
-      } else if (val == 10) {
-        this.navCtrl.setRoot(Clue6Page);
-      }
+    this.storage.ready().then(() => {
+      this.storage.get('status').then(val => {
+        if (val == 1) {
+          this.navCtrl.setRoot(MainPage);
+        } else if (val == 2) {
+          this.navCtrl.setRoot(AteaminfoPage);
+        } else if (val == 3) {
+          this.navCtrl.setRoot(Clue0bPage);
+        } else if (val == 4) {
+          this.navCtrl.setRoot(VerificationPage);
+        } else if (val == 5) {
+          this.navCtrl.setRoot(Clue1Page);
+        } else if (val == 6) {
+          this.navCtrl.setRoot(Clue2Page);
+        } else if (val == 7) {
+          this.navCtrl.setRoot(Clue3Page);
+        } else if (val == 8) {
+          this.navCtrl.setRoot(Clue4Page);
+        } else if (val == 9) {
+          this.navCtrl.setRoot(Clue5Page);
+        } else if (val == 10) {
+          this.navCtrl.setRoot(Clue6Page);
+        }
+      });
     });
   }
   buy() {

@@ -5,6 +5,7 @@ import { TabsPage } from '../../tabs/tabs';
 import { ThirdqrPage } from '../../thirdqr/thirdqr';
 import { Storage } from '@ionic/storage';
 import { AuthProvider } from '../../../providers/auth/auth';
+import firebase from 'firebase';
 
 @Component({
   selector: 'page-clue2',
@@ -62,7 +63,15 @@ export class Clue2Page {
             {
               text: 'OK!',
               handler: () => {
-                this.navCtrl.setRoot(TabsPage);
+                this.storage.get('teamid').then(val => {
+                  const statusRef: firebase.database.Reference = firebase
+                    .database()
+                    .ref(`/teams/` + val + '/status/');
+                  statusRef.set(0).then((res: Response) => {
+                    this.storage.set('status', 0);
+                    this.logout();
+                  });
+                });
               }
             }
           ]
