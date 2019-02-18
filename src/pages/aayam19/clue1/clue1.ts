@@ -53,6 +53,18 @@ export class Clue1Page {
       });
       confirm.present();
     }
+    else{
+      const confirm = this.alertCtrl.create({
+        title: ' Whoops pls. try again...',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
+    }
   }
   toNext() {
     this.storage.get('teamid').then(val => {

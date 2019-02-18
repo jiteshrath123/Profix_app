@@ -36,36 +36,175 @@ export class Clue0bPage {
     if (this.cob1.value.toUpperCase() == 'RED SKULL') {
       this.visible0 = false;
       this.visible1 = true;
+      
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '6/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
+    }
+    else{
+      const confirm = this.alertCtrl.create({
+        title: ' Whoops pls. try again...',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
     }
   }
   checkIn2() {
     if (this.cob2.value.toUpperCase() == 'HELA') {
       this.visible1 = false;
       this.visible2 = true;
+      
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '6/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
+    }else{
+      const confirm = this.alertCtrl.create({
+        title: ' Whoops pls. try again...',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
     }
   }
   checkIn3() {
     if (this.cob3.value.toUpperCase() == 'PERFECTION') {
       this.visible2 = false;
       this.visible3 = true;
+      
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '6/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
+    }else{
+      const confirm = this.alertCtrl.create({
+        title: ' Whoops pls. try again...',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
     }
   }
   checkIn4() {
     if (this.cob4.value.toUpperCase() == 'RONAN') {
       this.visible3 = false;
       this.visible4 = true;
+      
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '6/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
+    }else{
+      const confirm = this.alertCtrl.create({
+        title: ' Whoops pls. try again...',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
     }
   }
   checkIn5() {
     if (this.cob5.value.toUpperCase() == 'DORMAMMU') {
       this.visible4 = false;
       this.visible5 = true;
+      
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '5/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
+    }else{
+      const confirm = this.alertCtrl.create({
+        title: ' Whoops pls. try again...',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
     }
   }
   checkIn6() {
     if (this.cob6.value.toUpperCase() == 'DEADLANDS') {
       this.visible5 = false;
       this.visible6 = true;
+      
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '6/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
+    }else{
+      const confirm = this.alertCtrl.create({
+        title: ' Whoops pls. try again...',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
     }
   }
 

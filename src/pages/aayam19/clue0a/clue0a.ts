@@ -37,56 +37,179 @@ export class Clue0aPage {
     if (this.cc1.value.toUpperCase() == 'THE DEADLANDS') {
       this.visible1 = false;
       this.visible2 = true;
-    }
+    
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '1/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();}
+      else{
+        const confirm = this.alertCtrl.create({
+          title: ' Whoops pls. try again...',
+          buttons: [
+            {
+              text: 'OK!',
+              handler: () => {}
+            }
+          ]
+        });
+        confirm.present();
+      }
   }
   checkIn2() {
     if (this.cc2.value.toUpperCase() == 'THE HYDRA EMPIRE') {
       this.visible2 = false;
       this.visible3 = true;
-    }
+    
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '2/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();}
+      else{
+        const confirm = this.alertCtrl.create({
+          title: ' Whoops pls. try again...',
+          buttons: [
+            {
+              text: 'OK!',
+              handler: () => {}
+            }
+          ]
+        });
+        confirm.present();
+      }
   }
   checkIn3() {
     if (this.cc3.value.toUpperCase() == 'THE WASTELANDS') {
       this.visible3 = false;
       this.visible4 = true;
-    }
-  }
+    
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '3/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();}
+ 
+      else{
+        const confirm = this.alertCtrl.create({
+          title: ' Whoops pls. try again...',
+          buttons: [
+            {
+              text: 'OK!',
+              handler: () => {}
+            }
+          ]
+        });
+        confirm.present();
+      } }
   checkIn4() {
     if (this.cc4.value.toUpperCase() == 'NEW XANDAR') {
       this.visible4 = false;
       this.visible5 = true;
+      
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '4/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
     }
-  }
+  
+    else{
+      const confirm = this.alertCtrl.create({
+        title: ' Whoops pls. try again...',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
+    }}
   checkIn5() {
     if (this.cc5.value.toUpperCase() == 'DYSTOPIA') {
       this.visible5 = false;
       this.visible6 = true;
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '5/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
     }
-  }
+  
+    else{
+      const confirm = this.alertCtrl.create({
+        title: ' Whoops pls. try again...',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
+    }}
   checkIn6() {
     if (this.cc6.value.toUpperCase() == 'PERFECTION') {
       this.visible6 = false;
       this.visible7 = true;
+      const confirm = this.alertCtrl.create({
+        title: ' Checked',
+        message: '6/6',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
+    }
+    else{
+      const confirm = this.alertCtrl.create({
+        title: ' Whoops pls. try again...',
+        buttons: [
+          {
+            text: 'OK!',
+            handler: () => {}
+          }
+        ]
+      });
+      confirm.present();
     }
   }
 
   signIn() {
-    if (
-      (this.cc1.value == 'THE DEADLANDS',
-      this.cc2.value == 'THE HYDRA EMPIRE',
-      this.cc3.value == 'THE WASTELANDS',
-      this.cc4.value == 'NEW XANDAR',
-      this.cc5.value == 'DYSTOPIA',
-      this.cc6.value == 'PERFECTION')
-    ) {
-      this.storage.get('teamid').then(val => {
-        const statusRef: firebase.database.Reference = firebase
-          .database()
-          .ref(`/teams/` + val + '/status/');
-        statusRef.set(2).then((res: Response) => {
-          this.storage.set('status', 3);
-        });
-      });
       const confirm = this.alertCtrl.create({
         title: ' Quantum Realm CLue solved',
         message: 'Your Rank is',
@@ -108,7 +231,7 @@ export class Clue0aPage {
         ]
       });
       confirm.present();
-    }
+    
   }
   tonext() {
     this.storage.get('teamid').then(val => {
