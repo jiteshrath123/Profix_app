@@ -35,21 +35,21 @@ export class Clue3Page {
   signIn() {
     if (
       (this.c11.value == '16',
-      this.c12.value == '3',
-      this.c13.value == '2',
+      this.c12.value == '03',
+      this.c13.value == '02',
       this.c14.value == '13',
-      this.c21.value == '5',
+      this.c21.value == '05',
       this.c22.value == '10',
       this.c23.value == '11',
-      this.c24.value == '8',
-      this.c31.value == '9',
-      this.c32.value == '6',
-      this.c33.value == '7',
+      this.c24.value == '08',
+      this.c31.value == '09',
+      this.c32.value == '06',
+      this.c33.value == '07',
       this.c34.value == '12',
-      this.c41.value == '4',
+      this.c41.value == '04',
       this.c42.value == '15',
       this.c43.value == '14',
-      this.c44.value == '1')
+      this.c44.value == '01')
     ) {
       const confirm = this.alertCtrl.create({
         title: ' Quantum Realm CLue solved',
