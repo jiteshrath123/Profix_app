@@ -41,8 +41,6 @@ import { ThirdqrPage } from '../pages/thirdqr/thirdqr';
 import { FourthqrPage } from '../pages/fourthqr/fourthqr';
 import { FifthqrPage } from '../pages/fifthqr/fifthqr';
 import { SixthqrPage } from '../pages/sixthqr/sixthqr';
-import { Geofence } from '@ionic-native/geofence';
-import { Geolocation, GeolocationOriginal } from '@ionic-native/geolocation';
 import { FuelPage } from '../pages/aayam19/fuel/fuel';
 import { PaymentConfirmPage } from '../pages/payment-confirm/payment-confirm';
 import { StartPage } from '../pages/start/start';
@@ -137,8 +135,7 @@ import { StartPage } from '../pages/start/start';
     ScreenOrientation,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthProvider,
-    BarcodeScanner,
-    Geofence
+    BarcodeScanner
   ]
 })
 export class AppModule {}

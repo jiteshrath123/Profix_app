@@ -2,9 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, NavController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FCM } from '@ionic-native/fcm';
 import firebase from 'firebase';
 import { Storage } from '@ionic/storage';
-
 import { TabsPage } from '../pages/tabs/tabs';
 import { FuelPage } from '../pages/aayam19/fuel/fuel';
 @Component({
@@ -22,9 +22,24 @@ export class MyApp {
     platform: Platform,
     statusBar: StatusBar,
     splashScreen: SplashScreen,
-    storage: Storage
+    storage: Storage,
+    fcm: FCM
   ) {
     platform.ready().then(() => {
+      fcm.subscribeToTopic('all');
+      fcm.getToken().then(token => {
+        console.log(token);
+      });
+      fcm.onNotification().subscribe(data => {
+        if (data.wasTapped) {
+          console.log('Received in background');
+        } else {
+          console.log('Received in foreground');
+        }
+      });
+      fcm.onTokenRefresh().subscribe(token => {
+        console.log(token);
+      });
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
